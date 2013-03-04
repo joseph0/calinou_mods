@@ -13,8 +13,8 @@ dofile(minetest.get_modpath("moreblocks").."/_config.txt")
 dofile(minetest.get_modpath("moreblocks").."/redefinitions.lua")
 dofile(minetest.get_modpath("moreblocks").."/crafting.lua")
 dofile(minetest.get_modpath("moreblocks").."/aliases.lua")
-dofile(minetest.get_modpath("moreblocks").."/panes.lua")
-dofile(minetest.get_modpath("moreblocks").."/moreblocks_panes.lua")
+-- dofile(minetest.get_modpath("moreblocks").."/panes.lua")
+-- dofile(minetest.get_modpath("moreblocks").."/moreblocks_panes.lua")
 if (minetest.get_modpath("stairsplus")) then
 	dofile(minetest.get_modpath("moreblocks").."/stairsplus.lua")
 end
