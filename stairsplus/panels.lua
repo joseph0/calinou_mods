@@ -74,7 +74,7 @@ minetest.register_node(modname .. ":panel_" .. subname .. "_vertical", {
 minetest.register_craft({
 	output = modname .. ":panel_" .. subname .. "_bottom 8",
 	recipe = {
-		{recipeitem, recipeitem},
+		{modname .. ":slab_" .. subname, modname .. ":slab_" .. subname},
 	},
 })
 
