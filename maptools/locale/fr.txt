@@ -1,3 +1,5 @@
+# Translation by Calinou
+
 [maptools] loaded. = [maptools] a été chargé.
 
 Cloud = Nuage

@@ -1,3 +1,5 @@
+# Translation by Calinou
+
 [moreores] loaded. = [moreores] a été chargé.
 
 %s Ore = Minerai en %s

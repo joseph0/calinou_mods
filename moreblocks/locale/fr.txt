@@ -1,3 +1,5 @@
+# Translation by Calinou
+
 [moreblocks] loaded. = [moreblocks] a été chargé.
 
 Jungle Wooden Planks = Planches de bois de jungle

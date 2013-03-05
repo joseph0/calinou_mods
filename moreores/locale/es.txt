@@ -1,3 +1,5 @@
+# Translation by kaeza
+
 [moreores] loaded. = [moreores] cargado.
 
 %s Ore = Minerai de %s

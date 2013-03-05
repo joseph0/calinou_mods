@@ -1,3 +1,5 @@
+# Translation by kaeza
+
 [maptools] loaded. = [maptools] cargado.
 
 Cloud = Nube

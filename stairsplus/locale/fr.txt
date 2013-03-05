@@ -1,3 +1,5 @@
+# Translation by Calinou
+
 [stairsplus] loaded. = [stairsplus] a été chargé.
 
 %s Stairs = Escaliers en %s
