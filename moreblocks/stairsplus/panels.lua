@@ -10,11 +10,12 @@ end
 
 -- Node will be called <modname>panel_<subname>
 
-function register_panel(modname, subname, recipeitem, groups, images, description, drop)
+function register_panel(modname, subname, recipeitem, groups, images, description, drop, light)
 minetest.register_node(modname .. ":panel_" .. subname .. "_bottom", {
 	description = S("%s Panel"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
+	light_source = light,
 	drop = modname .. ":panel_" .. drop .. "_bottom",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -35,6 +36,7 @@ minetest.register_node(modname .. ":panel_" .. subname .. "_top", {
 	description = S("%s Panel"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
+	light_source = light,
 	drop = modname .. ":panel_" .. drop .. "_bottom",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -55,6 +57,7 @@ minetest.register_node(modname .. ":panel_" .. subname .. "_vertical", {
 	description = S("%s Panel"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
+	light_source = light,
 	drop = modname .. ":panel_" .. drop .. "_bottom",
 	paramtype = "light",
 	paramtype2 = "facedir",
