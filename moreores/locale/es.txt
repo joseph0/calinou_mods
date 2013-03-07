@@ -2,7 +2,7 @@
 
 [moreores] loaded. = [moreores] cargado.
 
-%s Ore = Minerai de %s
+%s Ore = Mineral de %s
 %s Lump = Pepita de %s
 %s Ingot = Lingote de %s
 %s Block = Bloque de %s
