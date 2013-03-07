@@ -36,6 +36,11 @@ Horizontal Jungle Tree = Tronco de árbol de la jungla horizontal
 Rope = Soga
 All-faces Tree = Tronco de Árbol
 
+%s Stairs = Escalera de %s
+%s Slab = Losa de %s
+%s Panel = Panel de %s
+%s Microblock = Microbloque de %s
+
 Wooden = Madera
 Papyrus = Papiro
 Dry Shrub = Arbusto Desértico

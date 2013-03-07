@@ -154,7 +154,3 @@ minetest.register_alias("moreblocks:cactusbrick", "moreblocks:cactus_brick")
 minetest.register_alias("moreblocks:cleanglass", "moreblocks:clean_glass")
 minetest.register_alias("moreblocks:emptybookshelf", "moreblocks:empty_bookshelf")
 minetest.register_alias("moreblocks:junglestick", "moreblocks:jungle_stick")
-
--- Convert old fences to new ones
-
-minetest.register_alias("default:fence_wood", "moreblocks:fence_wood")

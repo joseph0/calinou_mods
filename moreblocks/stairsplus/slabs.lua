@@ -11,7 +11,7 @@ end
 -- Node will be called <modname>slab_<subname>
 
 function register_slab(modname, subname, recipeitem, groups, images, description, drop, paramtype2)
-minetest.register_node(modname .. ":slab_" .. subname, {
+	minetest.register_node(modname .. ":slab_" .. subname, {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,

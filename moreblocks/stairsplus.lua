@@ -1,5 +1,3 @@
--- Code taken from Stairs+
-
 -- Nodes will be called <modname>:{stair,slab,panel,micro}_<subname>
 function register_stair_slab_panel_micro(modname, subname, recipeitem, groups, images, description, drop, paramtype2)
 	register_stair(modname, subname, recipeitem, groups, images, description, drop)
@@ -7,6 +5,87 @@ function register_stair_slab_panel_micro(modname, subname, recipeitem, groups, i
 	register_panel(modname, subname, recipeitem, groups, images, description, drop)
 	register_micro(modname, subname, recipeitem, groups, images, description, drop)
 end
+
+-- Default stairs/slabs/panels/microblocks
+
+register_stair_slab_panel_micro("moreblocks", "wood", "default:wood",
+	{snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
+	{"default_wood.png"},
+	"Wooden",
+	"wood",
+	"facedir")
+
+register_stair_slab_panel_micro("moreblocks", "stone", "default:stone",
+	{cracky=3},
+	{"default_stone.png"},
+	"Stone",
+	"cobble",
+	"none")
+
+register_stair_slab_panel_micro("moreblocks", "cobble", "default:cobble",
+	{cracky=3},
+	{"default_cobble.png"},
+	"Cobblestone",
+	"cobble",
+	"none")
+	
+register_stair_slab_panel_micro("moreblocks", "mossycobble", "default:mossycobble",
+	{cracky=3},
+	{"default_mossycobble.png"},
+	"Mossy Cobblestone",
+	"mossycobble",
+	"none")
+
+register_stair_slab_panel_micro("moreblocks", "brick", "default:brick",
+	{cracky=3},
+	{"default_brick.png"},
+	"Brick",
+	"brick",
+	"facedir")
+
+register_stair_slab_panel_micro("moreblocks", "sandstone", "default:sandstone",
+	{crumbly=2,cracky=2},
+	{"default_sandstone.png"},
+	"Sandstone",
+	"sandstone",
+	"none")
+	
+register_stair_slab_panel_micro("moreblocks", "steelblock", "default:steelblock",
+	{snappy=1,bendy=2,cracky=1,melty=2,level=2},
+	{"default_steel_block.png"},
+	"Steel Block",
+	"steelblock",
+	"none")
+	
+register_stair_slab_panel_micro("moreblocks", "desert_stone", "default:desert_stone",
+	{cracky=3},
+	{"default_desert_stone.png"},
+	"Desert Stone",
+	"desert_stone",
+	"none")
+	
+register_stair_slab_panel_micro("moreblocks", "glass", "default:glass",
+	{snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	{"default_glass.png"},
+	"Glass",
+	"glass",
+	"none")
+	
+register_stair_slab_panel_micro("moreblocks", "tree", "default:tree",
+	{tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	{"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
+	"Tree",
+	"tree",
+	"none")
+	
+register_stair_slab_panel_micro("moreblocks", "jungletree", "default:jungletree",
+	{tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	{"default_jungletree_top.png", "default_jungletree_top.png", "default_jungletree.png"},
+	"Jungle Tree",
+	"jungletree",
+	"none")
+
+-- More Blocks stairs/slabs/panels/microblocks
 
 register_stair_slab_panel_micro("moreblocks", "stone_bricks", "moreblocks:stone_bricks",
 		{cracky=3},

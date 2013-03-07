@@ -704,22 +704,4 @@ minetest.register_craft({
 	},
 })
 
-minetest.register_craft({
-	type = "cooking",
-	output = modname .. ":stair_" .. subname .. "_stone",
-	recipe = modname .. ":stair_" .. subname .. "_cobble",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = modname .. ":stair_" .. subname .. "_stone_wall",
-	recipe = modname .. ":stair_" .. subname .. "_cobble_wall",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = modname .. ":stair_" .. subname .. "_stone_wall_half",
-	recipe = modname .. ":stair_" .. subname .. "_cobble_wall_half",
-})
-
 end

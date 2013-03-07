@@ -15,9 +15,12 @@ dofile(minetest.get_modpath("moreblocks").."/crafting.lua")
 dofile(minetest.get_modpath("moreblocks").."/aliases.lua")
 -- dofile(minetest.get_modpath("moreblocks").."/panes.lua")
 -- dofile(minetest.get_modpath("moreblocks").."/moreblocks_panes.lua")
-if (minetest.get_modpath("stairsplus")) then
-	dofile(minetest.get_modpath("moreblocks").."/stairsplus.lua")
-end
+dofile(minetest.get_modpath("moreblocks").."/stairsplus/stairs.lua")
+dofile(minetest.get_modpath("moreblocks").."/stairsplus/slabs.lua")
+dofile(minetest.get_modpath("moreblocks").."/stairsplus/panels.lua")
+dofile(minetest.get_modpath("moreblocks").."/stairsplus/microblocks.lua")
+dofile(minetest.get_modpath("moreblocks").."/stairsplus/aliases.lua")
+dofile(minetest.get_modpath("moreblocks").."/stairsplus.lua")
 
 print(S("[moreblocks] loaded."))
 

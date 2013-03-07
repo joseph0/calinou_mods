@@ -44,5 +44,10 @@ Wooden Planks = Planches de bois
 Ladder = Échelle
 Glass = Verre
 
+%s Stairs = Escaliers en %s
+%s Slab = Demi-dalle en %s
+%s Panel = Barre en %s
+%s Microblock = Microbloc en %s
+
 %s Pane = Panneau en %s
 %s Fence = Barrière en %s
