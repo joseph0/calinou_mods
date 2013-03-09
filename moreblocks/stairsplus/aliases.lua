@@ -43,6 +43,7 @@ register_stairsplus_alias("stairsplus", "steelblock", "steelblock")
 register_stairsplus_alias("stairsplus", "mossycobble", "mossycobble")
 
 register_stairsplus_alias("moreblocks", "coalstone", "coal_stone")
+register_stairsplus_alias("moreblocks", "junglewood", "jungle_wood")
 register_stairsplus_alias("moreblocks", "ironstone", "iron_stone")
 register_stairsplus_alias("moreblocks", "coalglass", "coal_glass")
 register_stairsplus_alias("moreblocks", "ironglass", "iron_glass")
