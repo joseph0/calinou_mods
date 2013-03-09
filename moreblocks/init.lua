@@ -266,8 +266,8 @@ minetest.register_node("moreblocks:fence_jungle_wood", {
 	description = S("Jungle Wood Fence"),
 	drawtype = "fencelike",
 	tiles = {"moreblocks_jungle_wood.png"},
-	inventory_image = "moreblocks_jungle_wood_fence.png",
-	wield_image = "moreblocks_jungle_wood_fence.png",
+	inventory_image = "moreblocks_fence_jungle_wood.png",
+	wield_image = "moreblocks_fence_jungle_wood.png",
 	paramtype = "light",
 	selection_box = {
 		type = "fixed",
