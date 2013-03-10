@@ -106,6 +106,14 @@ register_stair_slab_panel_micro("moreblocks", "stone_bricks", "moreblocks:stone_
 	"none",
 	0)
 	
+register_stair_slab_panel_micro("moreblocks", "circle_stone_bricks", "moreblocks:circle_stone_bricks",
+	{cracky=3},
+	{"moreblocks_circle_stone_bricks.png"},
+	"Circle Stone Bricks Stairs",
+	"circle_stone_bricks",
+	"none",
+	0)
+	
 register_stair_slab_panel_micro("moreblocks", "iron_stone_bricks", "moreblocks:iron_stone_bricks",
 	{cracky=3},
 	{"moreblocks_iron_stone_bricks.png"},
