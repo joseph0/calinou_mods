@@ -89,7 +89,7 @@ register_stair_slab_panel_micro("moreblocks", "tree", "default:tree",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "jungletree", "default:jungletree",
-	{tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	{not_in_creative_inventory=1,tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
 	{"default_jungletree_top.png", "default_jungletree_top.png", "default_jungletree.png"},
 	"Jungle Tree",
 	"jungletree",
@@ -98,7 +98,7 @@ register_stair_slab_panel_micro("moreblocks", "jungletree", "default:jungletree"
 
 -- More Blocks stairs/slabs/panels/microblocks
 
-register_stair_slab_panel_micro("moreblocks", "stone_brick", "default:stone_brick",
+register_stair_slab_panel_micro("moreblocks", "stonebrick", "default:stonebrick",
 	{not_in_creative_inventory=1,cracky=3},
 	{"default_stone_brick.png"},
 	"Stone Bricks",
