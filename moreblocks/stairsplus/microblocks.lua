@@ -79,30 +79,4 @@ minetest.register_craft({
 		{recipeitem},
 	},
 })
-
-minetest.register_craft({
-	output = modname .. ":micro_" .. subname .. "_top 1",
-	recipe = {
-		{modname .. ":micro_" .. subname .. "_bottom"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":micro_" .. subname .. "_bottom 1",
-	recipe = {
-		{modname .. ":micro_" .. subname .. "_top"},
-	},
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = modname .. ":micro_" .. subname .. "_stone_bottom",
-	recipe = modname .. ":micro_" .. subname .. "_cobble_bottom",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = modname .. ":micro_" .. subname .. "_stone_top",
-	recipe = modname .. ":micro_" .. subname .. "_cobble_top",
-})
 end

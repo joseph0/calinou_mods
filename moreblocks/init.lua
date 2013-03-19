@@ -21,6 +21,8 @@ dofile(minetest.get_modpath("moreblocks").."/stairsplus/panels.lua")
 dofile(minetest.get_modpath("moreblocks").."/stairsplus/microblocks.lua")
 dofile(minetest.get_modpath("moreblocks").."/stairsplus/aliases.lua")
 dofile(minetest.get_modpath("moreblocks").."/stairsplus.lua")
+dofile(minetest.get_modpath("moreblocks").."/screwdriver.lua")
+dofile(minetest.get_modpath("moreblocks").."/circular_saw.lua")
 
 print(S("[moreblocks] loaded."))
 
@@ -356,4 +358,9 @@ minetest.register_craftitem("moreblocks:sweeper", {
 minetest.register_craftitem("moreblocks:jungle_stick", {
 	description = S("Jungle Stick"),
 	inventory_image = "moreblocks_junglestick.png",
+})
+
+minetest.register_craftitem("moreblocks:nothing", {
+	inventory_image = "invisible.png",
+	on_use = minetest.item_eat(0),
 })

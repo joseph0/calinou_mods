@@ -9,7 +9,7 @@ end
 -- Default stairs/slabs/panels/microblocks
 
 register_stair_slab_panel_micro("moreblocks", "wood", "default:wood",
-	{snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
+	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	{"default_wood.png"},
 	"Wooden",
 	"wood",
@@ -17,7 +17,7 @@ register_stair_slab_panel_micro("moreblocks", "wood", "default:wood",
 	0)
 
 register_stair_slab_panel_micro("moreblocks", "stone", "default:stone",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"default_stone.png"},
 	"Stone",
 	"cobble",
@@ -25,7 +25,7 @@ register_stair_slab_panel_micro("moreblocks", "stone", "default:stone",
 	0)
 
 register_stair_slab_panel_micro("moreblocks", "cobble", "default:cobble",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"default_cobble.png"},
 	"Cobblestone",
 	"cobble",
@@ -33,7 +33,7 @@ register_stair_slab_panel_micro("moreblocks", "cobble", "default:cobble",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "mossycobble", "default:mossycobble",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"default_mossycobble.png"},
 	"Mossy Cobblestone",
 	"mossycobble",
@@ -41,7 +41,7 @@ register_stair_slab_panel_micro("moreblocks", "mossycobble", "default:mossycobbl
 	0)
 
 register_stair_slab_panel_micro("moreblocks", "brick", "default:brick",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"default_brick.png"},
 	"Brick",
 	"brick",
@@ -57,7 +57,7 @@ register_stair_slab_panel_micro("moreblocks", "sandstone", "default:sandstone",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "steelblock", "default:steelblock",
-	{snappy=1,bendy=2,cracky=1,melty=2,level=2},
+	{not_in_creative_inventory=1,snappy=1,bendy=2,cracky=1,melty=2,level=2},
 	{"default_steel_block.png"},
 	"Steel Block",
 	"steelblock",
@@ -65,7 +65,7 @@ register_stair_slab_panel_micro("moreblocks", "steelblock", "default:steelblock"
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "desert_stone", "default:desert_stone",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"default_desert_stone.png"},
 	"Desert Stone",
 	"desert_stone",
@@ -73,7 +73,7 @@ register_stair_slab_panel_micro("moreblocks", "desert_stone", "default:desert_st
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "glass", "default:glass",
-	{snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	{not_in_creative_inventory=1,snappy=2,cracky=3,oddly_breakable_by_hand=3},
 	{"default_glass.png"},
 	"Glass",
 	"glass",
@@ -99,168 +99,168 @@ register_stair_slab_panel_micro("moreblocks", "jungletree", "default:jungletree"
 -- More Blocks stairs/slabs/panels/microblocks
 
 register_stair_slab_panel_micro("moreblocks", "stone_bricks", "moreblocks:stone_bricks",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_stone_bricks.png"},
-	"Stone Bricks Stairs",
+	"Stone Bricks",
 	"stone_bricks",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "circle_stone_bricks", "moreblocks:circle_stone_bricks",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_circle_stone_bricks.png"},
-	"Circle Stone Bricks Stairs",
+	"Circle Stone Bricks",
 	"circle_stone_bricks",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "iron_stone_bricks", "moreblocks:iron_stone_bricks",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_iron_stone_bricks.png"},
-	"Iron Stone Bricks Stairs",
+	"Iron Stone Bricks",
 	"iron_stone_bricks",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "stone_tile", "moreblocks:stone_tile",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_stone_tile.png"},
-	"Stonesquare Stairs",
+	"Stonesquare",
 	"stone_tile",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "split_stone_tile", "moreblocks:split_stone_tile",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_split_stone_tile_top.png", "moreblocks_split_stone_tile.png"},
-	"Split Stonesquare Stairs",
+	"Split Stonesquare",
 	"split_stone_tile",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "jungle_wood", "moreblocks:jungle_wood",
-	{snappy=1, choppy=2, oddly_breakable_by_hand=2,flammable=3},
+	{not_in_creative_inventory=1,snappy=1, choppy=2, oddly_breakable_by_hand=2,flammable=3},
 	{"moreblocks_jungle_wood.png"},
-	"Jungle Wood Stairs",
+	"Jungle Wood",
 	"jungle_wood",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "circle_stone_bricks", "moreblocks:circle_stone_bricks",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_circle_stone_bricks.png"},
-	"Circle Stone Brick Stairs",
+	"Circle Stone Brick",
 	"circle_stone_bricks",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "plankstone", "moreblocks:plankstone",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_plankstone.png", "moreblocks_plankstone.png", "moreblocks_plankstone.png",
 	"moreblocks_plankstone.png", "moreblocks_plankstone.png^[transformR90", "moreblocks_plankstone.png^[transformR90"},
-	"Plankstone Stairs",
+	"Plankstone",
 	"plankstone",
 	"facedir",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "coal_checker", "moreblocks:coal_checker",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_coal_checker.png", "moreblocks_coal_checker.png", "moreblocks_coal_checker.png",
 	"moreblocks_coal_checker.png", "moreblocks_coal_checker.png^[transformR90", "moreblocks_coal_checker.png^[transformR90"},
-	"Coal Checker Stairs",
+	"Coal Checker",
 	"coal_checker",
 	"facedir",
 	0)
 
 register_stair_slab_panel_micro("moreblocks", "iron_checker", "moreblocks:iron_checker",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_iron_checker.png", "moreblocks_iron_checker.png", "moreblocks_iron_checker.png",
 	"moreblocks_iron_checker.png", "moreblocks_iron_checker.png^[transformR90", "moreblocks_iron_checker.png^[transformR90"},
-	"Iron Checker Stairs",
+	"Iron Checker",
 	"iron_checker",
 	"facedir",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "cactus_checker", "moreblocks:cactus_checker",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_cactus_checker.png", "moreblocks_cactus_checker.png", "moreblocks_cactus_checker.png",
 	"moreblocks_cactus_checker.png", "moreblocks_cactus_checker.png^[transformR90", "moreblocks_cactus_checker.png^[transformR90"},
-	"Cactus Checker Stairs",
+	"Cactus Checker",
 	"cactus_checker",
 	"facedir",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "coal_stone", "moreblocks:coal_stone",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_coal_stone.png"},
-	"Coal Stone Stairs",
+	"Coal Stone",
 	"coal_stone",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "iron_stone", "moreblocks:iron_stone",
-	{cracky=3},
+	{not_in_creative_inventory=1,cracky=3},
 	{"moreblocks_iron_stone.png"},
-	"Iron Stone Stairs",
+	"Iron Stone",
 	"iron_stone",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "glow_glass", "moreblocks:glow_glass",
-	{snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	{not_in_creative_inventory=1,snappy=2,cracky=3,oddly_breakable_by_hand=3},
 	{"moreblocks_glow_glass.png"},
-	"Glow Glass Stairs",
+	"Glow Glass",
 	"glow_glass",
 	"none",
 	11)
 	
 register_stair_slab_panel_micro("moreblocks", "super_glow_glass", "moreblocks:super_glow_glass",
-	{snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	{not_in_creative_inventory=1,snappy=2, cracky=3, oddly_breakable_by_hand=3},
 	{"moreblocks_super_glow_glass.png"},
-	"Super Glow Glass Stairs",
+	"Super Glow Glass",
 	"super_glow_glass",
 	"none",
 	15)
 	
 register_stair_slab_panel_micro("moreblocks", "glass", "moreblocks:coal_glass",
-	{snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	{not_in_creative_inventory=1,snappy=2, cracky=3, oddly_breakable_by_hand=3},
 	{"moreblocks_coal_glass.png"},
-	"Coal Glass Stairs",
+	"Coal Glass",
 	"coal_glass",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "glass", "moreblocks:iron_glass",
-	{snappy=2,cracky=3,oddly_breakable_by_hand=3},
+	{not_in_creative_inventory=1,snappy=2,cracky=3,oddly_breakable_by_hand=3},
 	{"moreblocks_iron_glass.png"},
-	"Iron Glass Stairs",
+	"Iron Glass",
 	"iron_glass",
 	"none",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "wood_tile", "moreblocks:wood_tile",
-	{snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
 	{"moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png",
 	"moreblocks_wood_tile.png", "moreblocks_wood_tile.png^[transformR90", "moreblocks_wood_tile.png^[transformR90"},
-	"Wooden Tile Stairs",
+	"Wooden Tile",
 	"wood_tile",
 	"facedir",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "wood_tile_center", "moreblocks:wood_tile_center",
-	{snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
 	{"moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png",
 	"moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png^[transformR90", "moreblocks_wood_tile_center.png^[transformR90"},
-	"Centered Wooden Tile Stairs",
+	"Centered Wooden Tile",
 	"wood_tile_center",
 	"facedir",
 	0)
 
 register_stair_slab_panel_micro("moreblocks", "wood_tile_full", "moreblocks:wood_tile_full",
-	{snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
 	{"moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png",
 	"moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png^[transformR90", "moreblocks_wood_tile_full.png^[transformR90"},
-	"Full Wooden Tile Stairs",
+	"Full Wooden Tile",
 	"wood_tile_full",
 	"facedir",
 	0)

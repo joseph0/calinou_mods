@@ -501,8 +501,10 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
+-- Unregister default recipes
+
 minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. " 8",
+	output = "moreblocks:nothing 1",
 	recipe = {
 		{recipeitem, "", ""},
 		{recipeitem, recipeitem, ""},
@@ -511,210 +513,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. " 8",
+	output = "moreblocks:nothing 1",
 	recipe = {
 		{"", "", recipeitem},
 		{"", recipeitem, recipeitem},
 		{recipeitem, recipeitem, recipeitem},
 	},
 })
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall 8",
-	recipe = {
-		{recipeitem, recipeitem, recipeitem},
-		{recipeitem, recipeitem, ""},
-		{recipeitem, "", ""},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall 8",
-	recipe = {
-		{recipeitem, recipeitem, recipeitem},
-		{"", recipeitem, recipeitem},
-		{"", "", recipeitem},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall 2",
-	recipe = {
-		{modname .. ":stair_" .. subname, modname .. ":stair_" .. subname},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall 2",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_inverted", modname .. ":stair_" .. subname .. "_inverted"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. " 2",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_wall"},
-		{modname .. ":stair_" .. subname .. "_wall"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_inner 1",
-	recipe = {
-		{modname .. ":micro_" .. subname .. "_bottom", modname .. ":stair_" .. subname},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_inner 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_wall_half"},
-		{modname .. ":slab_" .. subname},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_outer 1",
-	recipe = {
-		{modname .. ":micro_" .. subname .. "_bottom"},
-		{modname .. ":slab_" .. subname},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_half 1",
-	recipe = {
-		{modname .. ":micro_" .. subname .. "_bottom"},
-		{modname .. ":panel_" .. subname .. "_bottom"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_half_inverted 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_half 1"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_half 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_half_inverted 1"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_right_half 2",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_half", modname .. ":stair_" .. subname .. "_half"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_half 2",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_right_half", modname .. ":stair_" .. subname .. "_right_half"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_right_half_inverted 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_right_half"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_right_half 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_right_half_inverted"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_half_inverted 2",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_right_half_inverted", modname .. ":stair_" .. subname .. "_right_half_inverted"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_right_half_inverted 2",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_half_inverted", modname .. ":stair_" .. subname .. "_half_inverted"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_inner_inverted 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_inner"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_outer_inverted 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_outer"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_inner 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_inner_inverted"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_outer 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_outer_inverted"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall_half 2",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_wall"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_wall_half"},
-		{modname .. ":stair_" .. subname .. "_wall_half"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall_half_inverted 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_wall_half"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_wall_half 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_wall_half_inverted"},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. "_inverted 1",
-	recipe = {
-		{modname .. ":stair_" .. subname},
-	},
-})
-
-minetest.register_craft({
-	output = modname .. ":stair_" .. subname .. " 1",
-	recipe = {
-		{modname .. ":stair_" .. subname .. "_inverted"},
-	},
-})
-
 end
