@@ -3,7 +3,6 @@
 [moreblocks] loaded. = [moreblocks] cargado.
 
 Jungle Wooden Planks = Tablones de madera de jungla
-Stone Bricks = Ladrillos de Piedra
 Empty Bookshelf = Estante para libros vacío
 Clean Glass = Cristal Limpio
 Plankstone = Tablones de piedra

@@ -45,6 +45,11 @@ minetest.register_alias("clay", "default:clay_lump")
 minetest.register_alias("steel", "default:steel_ingot")
 minetest.register_alias("steel_block", "default:steelblock")
 
+minetest.register_alias("stonebrick", "default:stone_brick")
+minetest.register_alias("stonebricks", "default:stone_brick")
+minetest.register_alias("stone_brick", "default:stone_brick")
+minetest.register_alias("stone_bricks", "default:stone_brick")
+
 minetest.register_alias("sweeper", "moreblocks:sweeper")
 minetest.register_alias("circularsaw", "moreblocks:circular_saw")
 minetest.register_alias("circular_saw", "moreblocks:circular_saw")
@@ -57,11 +62,6 @@ minetest.register_alias("junglestick", "moreblocks:jungle_stick")
 minetest.register_alias("jungle_stick", "moreblocks:jungle_stick")
 
 -- More Blocks aliases
-
-minetest.register_alias("stonebrick", "moreblocks:stone_bricks")
-minetest.register_alias("stonebricks", "moreblocks:stone_bricks")
-minetest.register_alias("stone_brick", "moreblocks:stone_bricks")
-minetest.register_alias("stone_bricks", "moreblocks:stone_bricks")
 
 minetest.register_alias("circlestonebrick", "moreblocks:circle_stone_bricks")
 minetest.register_alias("circlestonebricks", "moreblocks:circle_stone_bricks")
@@ -140,6 +140,11 @@ minetest.register_alias("full_wooden_tile", "moreblocks:wood_tile_full")
 minetest.register_alias("moreblocks:oerkkiblock", "default:mossycobble")
 
 -- Node and item renaming
+
+minetest.register_alias("moreblocks:stone_bricks", "default:stone_brick")
+minetest.register_alias("moreblocks:stonebrick", "default:stone_brick")
+minetest.register_alias("moreblocks:junglewood", "default:junglewood")
+minetest.register_alias("moreblocks:jungle_wood", "default:junglewood")
 
 minetest.register_alias("moreblocks:stonebrick", "moreblocks:stone_bricks")
 minetest.register_alias("moreblocks:junglewood", "moreblocks:jungle_wood")

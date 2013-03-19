@@ -98,9 +98,9 @@ register_stair_slab_panel_micro("moreblocks", "jungletree", "default:jungletree"
 
 -- More Blocks stairs/slabs/panels/microblocks
 
-register_stair_slab_panel_micro("moreblocks", "stone_bricks", "moreblocks:stone_bricks",
+register_stair_slab_panel_micro("moreblocks", "stone_brick", "default:stone_brick",
 	{not_in_creative_inventory=1,cracky=3},
-	{"moreblocks_stone_bricks.png"},
+	{"default_stone_brick.png"},
 	"Stone Bricks",
 	"stone_bricks",
 	"none",

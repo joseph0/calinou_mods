@@ -168,3 +168,120 @@ minetest.register_node(":default:fence_wood", {
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=2},
 	sounds = default.node_sound_wood_defaults(),
 })
+
+minetest.register_node(":default:grass_1", {
+	description = "Grass",
+	drawtype = "plantlike",
+	tiles = {"default_grass_1.png"},
+	inventory_image = "default_grass_1.png",
+	wield_image = "default_grass_1.png",
+	paramtype = "light",
+	walkable = false,
+	sunlight_propagates = true,
+	groups = {snappy=3,flammable=3,attached_node=1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+	on_place = function(itemstack, placer, pointed_thing)
+		-- place a random grass node
+		local stack = ItemStack("default:grass_" .. math.random(1,5))
+		local ret = minetest.item_place(stack, placer, pointed_thing)
+		return ItemStack("default:grass_1 " .. itemstack:get_count()-(1-ret:get_count()))
+	end,
+})
+
+minetest.register_node(":default:grass_2", {
+	description = "Grass",
+	drawtype = "plantlike",
+	tiles = {"default_grass_2.png"},
+	paramtype = "light",
+	walkable = false,
+	sunlight_propagates = true,
+	drop = "default:grass_1",
+	groups = {snappy=3,flammable=3,attached_node=1,not_in_creative_inventory=1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+minetest.register_node(":default:grass_3", {
+	description = "Grass",
+	drawtype = "plantlike",
+	tiles = {"default_grass_3.png"},
+	paramtype = "light",
+	walkable = false,
+	sunlight_propagates = true,
+	drop = "default:grass_1",
+	groups = {snappy=3,flammable=3,attached_node=1,not_in_creative_inventory=1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+minetest.register_node(":default:grass_4", {
+	description = "Grass",
+	drawtype = "plantlike",
+	tiles = {"default_grass_4.png"},
+	paramtype = "light",
+	walkable = false,
+	sunlight_propagates = true,
+	drop = "default:grass_1",
+	groups = {snappy=3,flammable=3,attached_node=1,not_in_creative_inventory=1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+minetest.register_node(":default:grass_5", {
+	description = "Grass",
+	drawtype = "plantlike",
+	tiles = {"default_grass_5.png"},
+	paramtype = "light",
+	walkable = false,
+	sunlight_propagates = true,
+	drop = "default:grass_1",
+	groups = {snappy=3,flammable=3,attached_node=1,not_in_creative_inventory=1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+minetest.register_node(":default:junglegrass", {
+	description = "Jungle Grass",
+	drawtype = "plantlike",
+	visual_scale = 1.25,
+	tiles = {"default_junglegrass.png"},
+	paramtype = "light",
+	walkable = false,
+	sunlight_propagates = true,
+	groups = {snappy=3,flammable=2,attached_node=1},
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+	},
+})
+
+minetest.register_node(":default:junglesapling", {
+	description = "Jungle Sapling",
+	drawtype = "plantlike",
+	sunlight_propagates = true,
+	tiles = {"default_junglesapling.png"},
+	paramtype = "light",
+	walkable = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.35, 0.3}
+	},
+	groups = {snappy=2,dig_immediate=3,flammable=2,attached_node=1},
+	sounds = default.node_sound_defaults(),
+})

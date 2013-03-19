@@ -36,13 +36,6 @@ Licensed under the zlib/libpng license for code and CC BY-SA for textures, see L
 
 -- Blocks
 
-minetest.register_node("moreblocks:jungle_wood", {
-	description = S("Jungle Wooden Planks"),
-	tiles = {"moreblocks_jungle_wood.png"},
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
-	sounds = default.node_sound_wood_defaults(),
-})
-
 minetest.register_node("moreblocks:wood_tile", {
 	description = S("Wooden Tile"),
 	tiles = {"moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png^[transformR90", "moreblocks_wood_tile.png^[transformR90"},
@@ -110,13 +103,6 @@ minetest.register_node("moreblocks:wood_tile_right", {
 	paramtype2 = "facedir",
 	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
 	sounds = default.node_sound_wood_defaults(),
-})
-
-minetest.register_node("moreblocks:stone_bricks", {
-	description = S("Stone Bricks"),
-	tiles = {"moreblocks_stone_bricks.png"},
-	groups = {cracky=3},
-	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node("moreblocks:circle_stone_bricks", {

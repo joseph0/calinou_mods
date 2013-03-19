@@ -3,7 +3,6 @@
 [moreblocks] loaded. = [moreblocks] a été chargé.
 
 Jungle Wooden Planks = Planches de bois de jungle
-Stone Bricks = Briques en pierre
 Empty Bookshelf = Étagère vide
 Clean Glass = Verre propre
 Plankstone = Pierre-bois
