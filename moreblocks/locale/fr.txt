@@ -44,6 +44,9 @@ Wooden Planks = Planches de bois
 Ladder = Échelle
 Glass = Verre
 
+Screwdriver = Tournevis
+Circular Saw = Scie circulaire
+
 %s Stairs = Escaliers en %s
 %s Slab = Demi-dalle en %s
 %s Panel = Barre en %s

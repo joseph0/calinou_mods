@@ -1,3 +1,12 @@
+-- Load translation library if intllib is installed
+
+local S
+if (minetest.get_modpath("intllib")) then
+	dofile(minetest.get_modpath("intllib").."/intllib.lua")
+	S = intllib.Getter(minetest.get_current_modname())
+	else
+	S = function ( s ) return s end
+end
 
 circular_saw = {};
 
@@ -300,8 +309,7 @@ end,
 
 
 minetest.register_node("moreblocks:circular_saw",  {
-		description = "Circular Saw", 
-
+		description = S("Circular Saw"), 
 		drawtype = "nodebox", 
 		node_box = {
 			type = "fixed", 

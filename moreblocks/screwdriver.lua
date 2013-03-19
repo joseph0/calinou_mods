@@ -1,7 +1,17 @@
+-- Load translation library if intllib is installed
+
+local S
+if (minetest.get_modpath("intllib")) then
+	dofile(minetest.get_modpath("intllib").."/intllib.lua")
+	S = intllib.Getter(minetest.get_current_modname())
+	else
+	S = function ( s ) return s end
+end
+
 -- Thanks to RealBadAngel for the screwdriver
 
 minetest.register_tool("moreblocks:screwdriver", {
-	description = "Screwdriver",
+	description = S("Screwdriver"),
 	inventory_image = "moreblocks_screwdriver.png",
 	wield_image = "moreblocks_screwdriver.png^[transformR90",
 	on_use = function(itemstack, user, pointed_thing)
@@ -77,8 +87,13 @@ minetest.register_tool("moreblocks:screwdriver", {
 minetest.register_craft({
 	output = "moreblocks:screwdriver",
 	recipe = {
-		{"default:steel_ingot"},
-		{"default:steel_ingot"},
-		{"default:stick"}
+		{"default:steel_ingot", "default:steel_ingot", "default:stick"},
+	}
+})
+
+minetest.register_craft({
+	output = "moreblocks:screwdriver",
+	recipe = {
+		{"default:stick", "default:steel_ingot", "default:steel_ingot"},
 	}
 })
