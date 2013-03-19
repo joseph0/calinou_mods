@@ -49,7 +49,7 @@ register_stair_slab_panel_micro("moreblocks", "brick", "default:brick",
 	0)
 
 register_stair_slab_panel_micro("moreblocks", "sandstone", "default:sandstone",
-	{crumbly=2,cracky=2},
+	{not_in_creative_inventory=1,crumbly=2,cracky=2},
 	{"default_sandstone.png"},
 	"Sandstone",
 	"sandstone",
@@ -81,7 +81,7 @@ register_stair_slab_panel_micro("moreblocks", "glass", "default:glass",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "tree", "default:tree",
-	{tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	{not_in_creative_inventory=1,tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
 	{"default_tree_top.png", "default_tree_top.png", "default_tree.png"},
 	"Tree",
 	"tree",
