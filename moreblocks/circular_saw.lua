@@ -150,7 +150,7 @@ circular_saw.update_inventory = function(pos, amount)
 	inv:set_list("input",   { modname.. ":" .. material .. " " .. math.floor(   (akt + amount) / 8) });
 
 	-- The stairnodes themshelves come frome moreblocks - regardless of their original full blocks
-	modname = "moreblocks";
+	if(modname == "technic") then modname = "stairsplus"; else modname = "moreblocks"; end
 
 	--print("circular_saw set to " ..modname.. " : " ..material.. " with " .. (akt+amount) .. " microblocks.");
 
