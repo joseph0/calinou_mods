@@ -336,8 +336,6 @@ minetest.register_node("moreores:copper_rail", {
 	},
 })
 
--- Ore generation
-
 local function generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume, ore_per_chunk, height_min, height_max)
 	if maxp.y < height_min or minp.y > height_max then
 		return
@@ -380,7 +378,53 @@ local function generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume, 
 	-- print(generate_ore done)
 end
 
-minetest.register_on_generated(function(minp, maxp, seed)
+-- Ore generation
+
+if minetest.registered_nodes["default:stone_with_gold"] then
+	-- Git
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "moreores:mineral_copper",
+		wherein        = "default:stone",
+		clust_scarcity = moreores_copper_chunk_size * moreores_copper_chunk_size * moreores_copper_chunk_size,
+		clust_num_ores = moreores_copper_ore_per_chunk,
+		clust_size     = moreores_copper_chunk_size,
+		height_min     = moreores_copper_min_depth,
+		height_max     = moreores_copper_max_depth
+	})
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "moreores:mineral_tin",
+		wherein        = "default:stone",
+		clust_scarcity = moreores_tin_chunk_size * moreores_tin_chunk_size * moreores_tin_chunk_size,
+		clust_num_ores = moreores_tin_ore_per_chunk,
+		clust_size     = moreores_tin_chunk_size,
+		height_min     = moreores_tin_min_depth,
+		height_max     = moreores_tin_max_depth
+	})
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "moreores:mineral_silver",
+		wherein        = "default:stone",
+		clust_scarcity = moreores_silver_chunk_size * moreores_silver_chunk_size * moreores_silver_chunk_size,
+		clust_num_ores = moreores_silver_ore_per_chunk,
+		clust_size     = moreores_silver_chunk_size,
+		height_min     = moreores_silver_min_depth,
+		height_max     = moreores_silver_max_depth
+	})
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "moreores:mineral_mithril",
+		wherein        = "default:stone",
+		clust_scarcity = moreores_mithril_chunk_size * moreores_mithril_chunk_size * moreores_mithril_chunk_size,
+		clust_num_ores = moreores_mithril_ore_per_chunk,
+		clust_size     = moreores_mithril_chunk_size,
+		height_min     = moreores_mithril_min_depth,
+		height_max     = moreores_mithril_max_depth
+	})
+	else
+	-- 0.4.5 and before
+	minetest.register_on_generated(function(minp, maxp, seed)
 	math.randomseed(os.time())
 	local current_seed = seed + math.random(10, 100)
 	local function get_next_seed()
@@ -402,3 +446,4 @@ minetest.register_on_generated(function(minp, maxp, seed)
 	generate_ore("moreores:mineral_mithril", "default:stone", minp, maxp, get_next_seed(),
 	1/moreores_mithril_chunk_size/moreores_mithril_chunk_size/moreores_mithril_chunk_size, moreores_mithril_ore_per_chunk, moreores_mithril_min_depth, moreores_mithril_max_depth)
 end)
+end
