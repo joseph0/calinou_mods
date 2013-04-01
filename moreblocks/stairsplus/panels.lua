@@ -11,7 +11,7 @@ end
 -- Node will be called <modname>panel_<subname>
 
 function register_panel(modname, subname, recipeitem, groups, images, description, drop, light)
-minetest.register_node(modname .. ":panel_" .. subname .. "_bottom", {
+minetest.register_node(":" .. modname .. ":panel_" .. subname .. "_bottom", {
 	description = S("%s Panel"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -32,7 +32,7 @@ minetest.register_node(modname .. ":panel_" .. subname .. "_bottom", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node(modname .. ":panel_" .. subname .. "_top", {
+minetest.register_node(":"..modname .. ":panel_" .. subname .. "_top", {
 	description = S("%s Panel"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -53,7 +53,7 @@ minetest.register_node(modname .. ":panel_" .. subname .. "_top", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node(modname .. ":panel_" .. subname .. "_vertical", {
+minetest.register_node(":"..modname .. ":panel_" .. subname .. "_vertical", {
 	description = S("%s Panel"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,

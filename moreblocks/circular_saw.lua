@@ -25,13 +25,7 @@ for i,v in ipairs({"default:wood", "default:default:stone", "default:cobble", "d
 	table.insert(circular_saw.known_stairs, v);
 end
 
-if(minetest.get_modpath("technic") ~= nil) then
-
-	-- technic has its own stairs
-	for i,v in ipairs({"concrete",  "marble",  "marble_bricks",  "granite",  "obsidian"}) do
-		table.insert(circular_saw.known_stairs, "technic:" ..v);
-	end
-else
+if(minetest.get_modpath("technic") == nil) then
 	-- Add a copy of the screwdriver from RealBadAngel"s technic mod
 	dofile(minetest.get_modpath("moreblocks") .. "/screwdriver.lua");
 end
@@ -149,9 +143,8 @@ circular_saw.update_inventory = function(pos, amount)
 	-- Display as many full blocks as possible
 	inv:set_list("input",   { modname.. ":" .. material .. " " .. math.floor(   (akt + amount) / 8) });
 
-	-- The stairnodes themshelves come frome moreblocks - regardless of their original full blocks
-	if(modname == "technic") then modname = "stairsplus"; else modname = "moreblocks"; end
-
+	-- The stairnodes made of default nodes use moreblocks namespace, other mods keep own.
+	if(modname == "default") then modname = "moreblocks"; end
 	--print("circular_saw set to " ..modname.. " : " ..material.. " with " .. (akt+amount) .. " microblocks.");
 
 	-- 0-7 microblocks may remain as a rest

@@ -11,7 +11,7 @@ end
 -- Node will be called <modname>:stair_<subname>
 
 function register_stair(modname, subname, recipeitem, groups, images, description, drop, light)
-	minetest.register_node(modname .. ":stair_" .. subname, {
+	minetest.register_node(":" .. modname .. ":stair_" .. subname, {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -81,7 +81,7 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_inverted", {
+	minetest.register_node(":" .. modname .. ":stair_" .. subname .. "_inverted", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -108,7 +108,7 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_half", {
+	minetest.register_node(":" .. modname .. ":stair_" .. subname .. "_half", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -153,7 +153,7 @@ return minetest.item_place(itemstack, placer, pointed_thing)
 end,
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_half_inverted", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_half_inverted", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -179,7 +179,7 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_right_half", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_right_half", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -224,7 +224,7 @@ return minetest.item_place(itemstack, placer, pointed_thing)
 end,
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_right_half_inverted", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_right_half_inverted", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -250,7 +250,7 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_wall", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_wall", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -277,7 +277,7 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_wall_half", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_wall_half", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -323,7 +323,7 @@ return minetest.item_place(itemstack, placer, pointed_thing)
 end,
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_wall_half_inverted", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_wall_half_inverted", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -351,7 +351,7 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_inner", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_inner", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -399,7 +399,7 @@ return minetest.item_place(itemstack, placer, pointed_thing)
 end,
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_outer", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_outer", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -445,7 +445,7 @@ return minetest.item_place(itemstack, placer, pointed_thing)
 end,
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_inner_inverted", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_inner_inverted", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -474,7 +474,7 @@ end,
 	sounds = default.node_sound_stone_defaults(),
 })
 
-	minetest.register_node(modname .. ":stair_" .. subname .. "_outer_inverted", {
+	minetest.register_node(":"..modname .. ":stair_" .. subname .. "_outer_inverted", {
 	description = S("%s Stairs"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,

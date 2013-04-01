@@ -11,7 +11,7 @@ end
 -- Node will be called <modname>slab_<subname>
 
 function register_slab(modname, subname, recipeitem, groups, images, description, drop, paramtype2, light)
-	minetest.register_node(modname .. ":slab_" .. subname, {
+	minetest.register_node(":" .. modname .. ":slab_" .. subname, {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -108,7 +108,7 @@ minetest.register_node(":stairs:slab_" .. subname, {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_inverted", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_inverted", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -186,7 +186,7 @@ minetest.register_node(modname .. ":slab_" .. subname .. "_inverted", {
 	end,
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_wall", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_wall", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -206,7 +206,7 @@ minetest.register_node(modname .. ":slab_" .. subname .. "_wall", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_quarter_wall", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_quarter_wall", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -227,7 +227,7 @@ minetest.register_node(modname .. ":slab_" .. subname .. "_quarter_wall", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_three_quarter_wall", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_three_quarter_wall", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -248,7 +248,7 @@ minetest.register_node(modname .. ":slab_" .. subname .. "_three_quarter_wall", 
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_quarter", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_quarter", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -347,7 +347,7 @@ minetest.register_node(modname .. ":slab_" .. subname .. "_quarter", {
 	end,
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_quarter_inverted", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_quarter_inverted", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -446,7 +446,7 @@ minetest.register_node(modname .. ":slab_" .. subname .. "_quarter_inverted", {
 	end,
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_three_quarter", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_three_quarter", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -467,7 +467,7 @@ minetest.register_node(modname .. ":slab_" .. subname .. "_three_quarter", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-minetest.register_node(modname .. ":slab_" .. subname .. "_three_quarter_inverted", {
+minetest.register_node(":"..modname .. ":slab_" .. subname .. "_three_quarter_inverted", {
 	description = S("%s Slab"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
