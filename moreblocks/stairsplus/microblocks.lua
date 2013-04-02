@@ -11,7 +11,7 @@ end
 -- Node will be called <modname>micro_<subname>
 
 function register_micro(modname, subname, recipeitem, groups, images, description, drop, light)
-minetest.register_node(modname .. ":micro_" .. subname .. "_bottom", {
+minetest.register_node(":"..modname .. ":micro_" .. subname .. "_bottom", {
 	description = S("%s Microblock"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,
@@ -51,7 +51,7 @@ return minetest.item_place(itemstack, placer, pointed_thing)
 end,
 })
 
-minetest.register_node(modname .. ":micro_" .. subname .. "_top", {
+minetest.register_node(":"..modname .. ":micro_" .. subname .. "_top", {
 	description = S("%s Microblock"):format(S(description)),
 	drawtype = "nodebox",
 	tiles = images,

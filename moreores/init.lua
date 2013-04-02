@@ -186,27 +186,6 @@ end
 local modname = "moreores"
 
 local oredefs = {
-	gold = {
-		makes = {ore=true, block=true, lump=true, ingot=true, chest=true},
-		tools = {
-			pick = {
-				cracky={times={[1]=2.00, [2]=0.50, [3]=0.30}, uses=70, maxlevel=1}
-			},
-			shovel = {
-				crumbly={times={[1]=0.60, [2]=0.25, [3]=0.15}, uses=70, maxlevel=1}
-			},
-			axe = {
-				choppy={times={[1]=1.70, [2]=0.40, [3]=0.35}, uses=70, maxlevel=1},
-				fleshy={times={[2]=0.90, [3]=0.30}, uses=70, maxlevel=1}
-			},
-			sword = {
-				fleshy={times={[2]=0.60, [3]=0.20}, uses=70, maxlevel=1},
-				snappy={times={[2]=0.60, [3]=0.20}, uses=70, maxlevel=1},
-				choppy={times={[3]=0.65}, uses=70, maxlevel=0}
-			}
-		},
-		punchint = 0.85
-	},
 	silver = {
 		makes = {ore=true, block=true, lump=true, ingot=true, chest=true},
 		tools = {
@@ -228,34 +207,9 @@ local oredefs = {
 		},
 		punchint = 1.0
 	},
-	copper = {
-		makes = {ore=true, block=true, lump=true, ingot=true, chest=true},
-		tools = {}
-	},
 	tin = {
 		makes = {ore=true, block=true, lump=true, ingot=true, chest=false},
 		tools = {}
-	},
-	bronze = {
-		makes = {ore=false, block=true, lump=false, ingot=true, chest=true},
-		tools = {
-			pick = {
-				cracky={times={[1]=3.00, [2]=1.20, [3]=0.80}, uses=160, maxlevel=1}
-			},
-			shovel = {
-				crumbly={times={[1]=1.50, [2]=0.50, [3]=0.30}, uses=160, maxlevel=1}
-			},
-			axe = {
-				choppy={times={[1]=3.00, [2]=1.00, [3]=0.60}, uses=160, maxlevel=1},
-				fleshy={times={[2]=1.30, [3]=0.70}, uses=160, maxlevel=1}
-			},
-			sword = {
-				fleshy={times={[2]=0.80, [3]=0.40}, uses=160, maxlevel=1},
-				snappy={times={[2]=0.80, [3]=0.40}, uses=160, maxlevel=1},
-				choppy={times={[3]=0.90}, uses=160, maxlevel=0}
-			}
-		},
-		punchint = 1.05
 	},
 	mithril = {
 		makes = {ore=true, block=true, lump=true, ingot=true, chest=false},
@@ -382,16 +336,6 @@ end
 
 if minetest.registered_nodes["default:stone_with_gold"] then
 	-- Git
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "moreores:mineral_copper",
-		wherein        = "default:stone",
-		clust_scarcity = moreores_copper_chunk_size * moreores_copper_chunk_size * moreores_copper_chunk_size,
-		clust_num_ores = moreores_copper_ore_per_chunk,
-		clust_size     = moreores_copper_chunk_size,
-		height_min     = moreores_copper_min_depth,
-		height_max     = moreores_copper_max_depth
-	})
 	minetest.register_ore({
 		ore_type       = "scatter",
 		ore            = "moreores:mineral_tin",
