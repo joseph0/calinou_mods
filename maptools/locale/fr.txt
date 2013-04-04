@@ -20,6 +20,9 @@ Light Block = Bloqueur de lumière
 Light Bulb = Bloc lumineux
 Player Clip = Bloque-joueurs
 Full Clip = Bloque-tout
+Permanent Fire = Feu permanent
+Fake Fire = Faux feu
+Igniter = Incendieur
 
 Unbreakable Stone = Pierre incassable
 Unbreakable Sand = Sable incassable

@@ -261,7 +261,6 @@ minetest.register_node("maptools:smoke", {
 	drawtype = "allfaces_optional",
 	walkable = false,
 	paramtype = "light",
-	sunlight_propagates = true,
 	groups = {unbreakable=1, not_in_creative_inventory=1},
 	post_effect_color = {a=127, r=127, g=127, b=127},
 })
@@ -275,11 +274,57 @@ minetest.register_node("maptools:ladder", {
 	paramtype = "light",
 	paramtype2 = "wallmounted",
 	walkable = false,
+	sunlight_propagates = true,
 	selection_box = {
 		type = "wallmounted",
 	},
 	groups = {unbreakable=1, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
+})
+
+minetest.register_node("maptools:permanent_fire", {
+	description = S("Permanent Fire"),
+	drawtype = "plantlike",
+	paramtype = "light",
+	tiles = {{
+		name="fire_basic_flame_animated.png",
+		animation={type="vertical_frames", aspect_w=16, aspect_h=16, length=1},
+	}},
+	inventory_image = "fire_basic_flame.png",
+	light_source = 14,
+	groups = {unbreakable=1, not_in_creative_inventory=1},
+	drop = '',
+	sunlight_propagates = true,
+	walkable = false,
+	damage_per_second = 4,
+})
+
+minetest.register_node("maptools:fake_fire", {
+	description = S("Fake Fire"),
+	drawtype = "plantlike",
+	paramtype = "light",
+	tiles = {{
+		name="fire_basic_flame_animated.png",
+		animation={type="vertical_frames", aspect_w=16, aspect_h=16, length=1},
+	}},
+	inventory_image = "fire_basic_flame.png",
+	light_source = 14,
+	groups = {unbreakable=1, not_in_creative_inventory=1},
+	drop = '',
+	sunlight_propagates = true,
+	walkable = false,
+})
+
+minetest.register_node("maptools:igniter", {
+	drawtype = "airlike",
+	description = S("Igniter"),
+	paramtype = "light",
+	inventory_image = "fire_basic_flame.png",
+	groups = {igniter=2, unbreakable=1, not_in_creative_inventory=1},
+	drop = '',
+	sunlight_propagates = true,
+	pointable = false,
+	walkable = false,
 })
 
 -- Items
@@ -346,14 +391,5 @@ minetest.register_on_punchnode(function(pos, node, puncher)
 	if puncher:get_wielded_item():get_name() == "maptools:pick_admin"
 	and minetest.env: get_node(pos).name ~= "air" then
 		minetest.env:remove_node(pos)
-		puncher:get_inventory():add_item('main', node)
-	end
-end)
-
-minetest.register_on_punchnode(function(pos, node, puncher)
-	if puncher:get_wielded_item():get_name() == "maptools:pick_admin"
-	and minetest.env: get_node(pos).name ~= "air" then
-		minetest.env:remove_node(pos)
-		puncher:get_inventory():add_item('main', node)
 	end
 end)
