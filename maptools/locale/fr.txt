@@ -5,6 +5,7 @@
 Cloud = Nuage
 Infinite Fuel = Carburant infini
 Admin Pickaxe = Pioche d'administrateur
+Admin Pickaxe With Drops = Pioche d'administrateur qui donne des objets
 Copper Coin = Pièce de cuivre
 Silver Coin = Pièce d'argent
 Gold Coin = Pièce d'or
