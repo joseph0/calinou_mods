@@ -14,8 +14,9 @@ circular_saw.known_stairs = {}
 
 
 -- Register known moreblocks stairs
-for i,v in ipairs({"default:wood", "default:default:stone", "default:cobble", "default:mossycobble", "default:brick", "default:sandstone",
+for i,v in ipairs({"default:wood", "default:stone", "default:cobble", "default:mossycobble", "default:brick", "default:sandstone",
 				"default:steelblock", "default:desert_stone", "default:glass", "default:tree", "default:jungletree", "default:stonebrick",
+				"default:obsidian", "default:obsidian_glass", "default:stone_bricks",
 
 				"moreblocks:coal_stone", "moreblocks:iron_stone", "moreblocks:coal_checker", "moreblocks:iron_checker",
 				"moreblocks:cactus_checker", "moreblocks:coal_glass", "moreblocks:iron_glass", "moreblocks:glow_glass",
@@ -387,13 +388,4 @@ minetest.register_node("moreblocks:circular_saw",  {
 			return circular_saw.on_metadata_inventory_take(pos, listname, index, stack, player);
 		end
 
-})
-
-minetest.register_craft({
-		output = "moreblocks:circular_saw", 
-		recipe = {
-				{ "default:tree",  "default:tree",  "default:tree" },
-				{ "default:tree",  "default:steel_ingot",  "default:tree"},
-				{ "default:tree",  "default:tree",  "default:tree"},
-		}
 })

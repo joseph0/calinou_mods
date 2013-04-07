@@ -61,6 +61,10 @@ minetest.register_alias("sweep", "moreblocks:sweeper")
 minetest.register_alias("junglestick", "moreblocks:jungle_stick")
 minetest.register_alias("jungle_stick", "moreblocks:jungle_stick")
 
+minetest.register_alias("obsidian", "default:obsidian")
+minetest.register_alias("obsidianglass", "default:obsidian_glass")
+minetest.register_alias("obsidian_glass", "default:obsidian_glass")
+
 -- More Blocks aliases
 
 minetest.register_alias("circlestonebrick", "moreblocks:circle_stone_bricks")

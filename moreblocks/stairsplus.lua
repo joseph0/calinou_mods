@@ -222,7 +222,7 @@ register_stair_slab_panel_micro("moreblocks", "super_glow_glass", "moreblocks:su
 	"none",
 	15)
 	
-register_stair_slab_panel_micro("moreblocks", "glass", "moreblocks:coal_glass",
+register_stair_slab_panel_micro("moreblocks", "coal_glass", "moreblocks:coal_glass",
 	{not_in_creative_inventory=1,snappy=2, cracky=3, oddly_breakable_by_hand=3},
 	{"moreblocks_coal_glass.png"},
 	"Coal Glass",
@@ -230,7 +230,7 @@ register_stair_slab_panel_micro("moreblocks", "glass", "moreblocks:coal_glass",
 	"none",
 	0)
 	
-register_stair_slab_panel_micro("moreblocks", "glass", "moreblocks:iron_glass",
+register_stair_slab_panel_micro("moreblocks", "iron_glass", "moreblocks:iron_glass",
 	{not_in_creative_inventory=1,snappy=2,cracky=3,oddly_breakable_by_hand=3},
 	{"moreblocks_iron_glass.png"},
 	"Iron Glass",
@@ -263,4 +263,20 @@ register_stair_slab_panel_micro("moreblocks", "wood_tile_full", "moreblocks:wood
 	"Full Wooden Tile",
 	"wood_tile_full",
 	"facedir",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "obsidian", "default:obsidian",
+	{not_in_creative_inventory=1,cracky=1,level=2},
+	{"default_obsidian.png"},
+	"Obsidian",
+	"obsidian",
+	"none",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "obsidian_glass", "default:obsidian_glass",
+	{not_in_creative_inventory=1,cracky=3,oddly_breakable_by_hand=3},
+	{"default_obsidian_glass.png"},
+	"Obsidian Glass",
+	"obsidian_glass",
+	"none",
 	0)

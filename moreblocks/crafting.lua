@@ -354,3 +354,13 @@ minetest.register_craft({
 		{"moreblocks:horizontal_jungle_tree"},
 	}
 })
+
+
+minetest.register_craft({
+		output = "moreblocks:circular_saw 1", 
+		recipe = {
+				{ "",  "default:steel_ingot",  "" },
+				{ "default:tree",  "default:tree",  "default:tree"},
+				{ "default:tree",  "",  "default:tree"},
+		}
+})
