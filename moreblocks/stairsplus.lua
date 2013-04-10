@@ -138,9 +138,9 @@ register_stair_slab_panel_micro("moreblocks", "split_stone_tile", "moreblocks:sp
 	"none",
 	0)
 	
-register_stair_slab_panel_micro("moreblocks", "jungle_wood", "moreblocks:jungle_wood",
+register_stair_slab_panel_micro("moreblocks", "jungle_wood", "default:junglewood",
 	{not_in_creative_inventory=1,snappy=1, choppy=2, oddly_breakable_by_hand=2,flammable=3},
-	{"moreblocks_jungle_wood.png"},
+	{"default_junglewood.png"},
 	"Jungle Wood",
 	"jungle_wood",
 	"none",

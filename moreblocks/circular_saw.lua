@@ -16,13 +16,13 @@ circular_saw.known_stairs = {}
 -- Register known moreblocks stairs
 for i,v in ipairs({"default:wood", "default:stone", "default:cobble", "default:mossycobble", "default:brick", "default:sandstone",
 				"default:steelblock", "default:desert_stone", "default:glass", "default:tree", "default:jungletree", "default:stonebrick",
-				"default:obsidian", "default:obsidian_glass", "default:stone_bricks",
+				"default:obsidian", "default:obsidian_glass", "default:stone_bricks", "default:junglewood",
 
 				"moreblocks:coal_stone", "moreblocks:iron_stone", "moreblocks:coal_checker", "moreblocks:iron_checker",
 				"moreblocks:cactus_checker", "moreblocks:coal_glass", "moreblocks:iron_glass", "moreblocks:glow_glass",
 				"moreblocks:super_glow_glass", "moreblocks:wooden_tile", "moreblocks:stone_tile", "moreblocks:split_stone_tile",
-				"moreblocks:iron_stone_bricks", "moreblocks:circle_stone_bricks", "moreblocks:jungle_wood",
-				"moreblocks:wood_tile_centered", "moreblocks:wood_tile_full", "moreblocks:plank_stone"}) do
+				"moreblocks:iron_stone_bricks", "moreblocks:circle_stone_bricks", "moreblocks:wood_tile_centered", 
+				"moreblocks:wood_tile_full", "moreblocks:plank_stone"}) do
 	table.insert(circular_saw.known_stairs, v);
 end
 
