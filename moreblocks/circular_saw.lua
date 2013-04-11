@@ -85,10 +85,10 @@ circular_saw.get_stair_output_inv = function(modname, material, anz, max)
 	modname .. ":slab_"  .. material .. "_quarter_wall "           .. math.min(math.floor(anz/2), max_offered),  
 
 
-	modname .. ":slab_"  .. material .. "_three_quarter_wall "     .. math.min(math.floor(anz/6), max_offered), 
+	modname .. ":slab_"  .. material .. " "                        .. math.min(math.floor(anz/4), max_offered),
 	modname .. ":slab_"  .. material .. "_quarter_inverted "       .. math.min(math.floor(anz/2), max_offered),
 	modname .. ":stair_" .. material .. "_outer_inverted "         .. math.min(math.floor(anz/7), max_offered),
-	modname .. ":slab_"  .. material .. " "                        .. math.min(math.floor(anz/4), max_offered),
+	modname .. ":slab_"  .. material .. "_three_quarter_wall "     .. math.min(math.floor(anz/6), max_offered),
 	modname .. ":slab_"  .. material .. "_three_quarter_inverted " .. math.min(math.floor(anz/6), max_offered),
 	modname .. ":stair_" .. material .. "_right_half_inverted "    .. math.min(math.floor(anz/3), max_offered),
 	"", 
