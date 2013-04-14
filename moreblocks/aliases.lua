@@ -145,13 +145,11 @@ minetest.register_alias("moreblocks:oerkkiblock", "default:mossycobble")
 
 -- Node and item renaming
 
-minetest.register_alias("moreblocks:stone_bricks", "default:stone_brick")
-minetest.register_alias("moreblocks:stonebrick", "default:stone_brick")
+minetest.register_alias("moreblocks:stone_bricks", "default:stonebrick")
+minetest.register_alias("moreblocks:stonebrick", "default:stonebrick")
 minetest.register_alias("moreblocks:junglewood", "default:junglewood")
 minetest.register_alias("moreblocks:jungle_wood", "default:junglewood")
 
-minetest.register_alias("moreblocks:stonebrick", "moreblocks:stone_bricks")
-minetest.register_alias("moreblocks:junglewood", "moreblocks:jungle_wood")
 minetest.register_alias("moreblocks:horizontaltree", "moreblocks:horizontal_tree")
 minetest.register_alias("moreblocks:horizontaljungletree", "moreblocks:horizontal_jungle_tree")
 minetest.register_alias("moreblocks:stonesquare", "moreblocks:stone_tile")

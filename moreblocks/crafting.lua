@@ -180,7 +180,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "moreblocks:junglewood 4",
+	output = "default:junglewood 4",
 	recipe = {
 		{"moreblocks:horizontal_jungle_tree"},
 	}
@@ -348,7 +348,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:jungle_tree 2",
+	output = "default:jungletree 2",
 	recipe = {
 		{"moreblocks:horizontal_jungle_tree"},
 		{"moreblocks:horizontal_jungle_tree"},
