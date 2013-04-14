@@ -40,7 +40,7 @@ minetest.register_node("moreblocks:wood_tile", {
 	description = S("Wooden Tile"),
 	tiles = {"moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png^[transformR90", "moreblocks_wood_tile.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -48,7 +48,7 @@ minetest.register_node("moreblocks:wood_tile_flipped", {
 	description = S("Wooden Tile"),
 	tiles = {"moreblocks_wood_tile_flipped.png", "moreblocks_wood_tile_flipped.png", "moreblocks_wood_tile_flipped.png", "moreblocks_wood_tile_flipped.png", "moreblocks_wood_tile_flipped.png^[transformR90", "moreblocks_wood_tile_flipped.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -56,7 +56,7 @@ minetest.register_node("moreblocks:wood_tile_center", {
 	description = S("Centered Wooden Tile"),
 	tiles = {"moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png^[transformR90", "moreblocks_wood_tile_center.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -65,7 +65,7 @@ minetest.register_node("moreblocks:wood_tile_full", {
 	tiles = {"moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png",
 	"moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png^[transformR90", "moreblocks_wood_tile_full.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -74,7 +74,7 @@ minetest.register_node("moreblocks:wood_tile_up", {
 	tiles = {"moreblocks_wood_tile_up.png", "moreblocks_wood_tile_up.png", "moreblocks_wood_tile_up.png",
 	"moreblocks_wood_tile_up.png", "moreblocks_wood_tile_up.png^[transformR90", "moreblocks_wood_tile_up.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -83,7 +83,7 @@ minetest.register_node("moreblocks:wood_tile_down", {
 	tiles = {"moreblocks_wood_tile_down.png", "moreblocks_wood_tile_down.png", "moreblocks_wood_tile_down.png",
 	"moreblocks_wood_tile_down.png", "moreblocks_wood_tile_down.png^[transformR90", "moreblocks_wood_tile_down.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -92,7 +92,7 @@ minetest.register_node("moreblocks:wood_tile_left", {
 	tiles = {"moreblocks_wood_tile_left.png", "moreblocks_wood_tile_left.png", "moreblocks_wood_tile_left.png",
 	"moreblocks_wood_tile_left.png", "moreblocks_wood_tile_left.png^[transformR90", "moreblocks_wood_tile_left.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -101,7 +101,7 @@ minetest.register_node("moreblocks:wood_tile_right", {
 	tiles = {"moreblocks_wood_tile_right.png", "moreblocks_wood_tile_right.png", "moreblocks_wood_tile_right.png",
 	"moreblocks_wood_tile_right.png", "moreblocks_wood_tile_right.png^[transformR90", "moreblocks_wood_tile_right.png^[transformR90"},
 	paramtype2 = "facedir",
-	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	groups = {snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	sounds = default.node_sound_wood_defaults(),
 })
 
