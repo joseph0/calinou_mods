@@ -239,7 +239,7 @@ register_stair_slab_panel_micro("moreblocks", "iron_glass", "moreblocks:iron_gla
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "wood_tile", "moreblocks:wood_tile",
-	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	{"moreblocks_wood_tile.png", "moreblocks_wood_tile.png", "moreblocks_wood_tile.png",
 	"moreblocks_wood_tile.png", "moreblocks_wood_tile.png^[transformR90", "moreblocks_wood_tile.png^[transformR90"},
 	"Wooden Tile",
@@ -248,7 +248,7 @@ register_stair_slab_panel_micro("moreblocks", "wood_tile", "moreblocks:wood_tile
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "wood_tile_center", "moreblocks:wood_tile_center",
-	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	{"moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png",
 	"moreblocks_wood_tile_center.png", "moreblocks_wood_tile_center.png^[transformR90", "moreblocks_wood_tile_center.png^[transformR90"},
 	"Centered Wooden Tile",
@@ -257,7 +257,7 @@ register_stair_slab_panel_micro("moreblocks", "wood_tile_center", "moreblocks:wo
 	0)
 
 register_stair_slab_panel_micro("moreblocks", "wood_tile_full", "moreblocks:wood_tile_full",
-	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3,wood=1},
+	{not_in_creative_inventory=1,snappy=1,choppy=2,oddly_breakable_by_hand=2,flammable=3},
 	{"moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png",
 	"moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png^[transformR90", "moreblocks_wood_tile_full.png^[transformR90"},
 	"Full Wooden Tile",
