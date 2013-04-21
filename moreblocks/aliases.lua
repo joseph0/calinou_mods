@@ -27,6 +27,9 @@ minetest.register_alias("stonesword", "default:sword_stone")
 minetest.register_alias("steelsword", "default:sword_steel")
 minetest.register_alias("ironsword", "default:sword_steel")
 
+minetest.register_alias("screwdriver", "screwdriver:screwdriver")
+minetest.register_alias("screw_driver", "screwdriver:screwdriver")
+
 minetest.register_alias("grass", "default:dirt_with_grass")
 minetest.register_alias("grassblock", "default:dirt_with_grass")
 minetest.register_alias("grass_block", "default:dirt_with_grass")
@@ -139,9 +142,10 @@ minetest.register_alias("full_woodentile", "moreblocks:wood_tile_full")
 minetest.register_alias("full_wood_tile", "moreblocks:wood_tile_full")
 minetest.register_alias("full_wooden_tile", "moreblocks:wood_tile_full")
 
--- Old block replacement
+-- Old block/item replacement
 
 minetest.register_alias("moreblocks:oerkkiblock", "default:mossycobble")
+minetest.register_alias("moreblocks:screwdriver", "screwdriver:screwdriver")
 
 -- Node and item renaming
 

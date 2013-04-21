@@ -26,11 +26,6 @@ for i,v in ipairs({"default:wood", "default:stone", "default:cobble", "default:m
 	table.insert(circular_saw.known_stairs, v);
 end
 
-if(minetest.get_modpath("technic") == nil) then
-	-- Add a copy of the screwdriver from RealBadAngel"s technic mod
-	dofile(minetest.get_modpath("moreblocks") .. "/screwdriver.lua");
-end
-
 	
 -- How many microblocks does this shape at the output inventory cost?
 circular_saw.cost_in_microblocks = { 6, 7, 5, 3, 3, 2, 4,
