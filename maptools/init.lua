@@ -179,14 +179,72 @@ minetest.register_node("maptools:fullclip", {
 	groups = {unbreakable=1, not_in_creative_inventory=1},
 })
 
-minetest.register_node("maptools:lightblock", {
-	description = S("Light Block"),
+minetest.register_node("maptools:playerclip", {
+	description = S("Player Clip"),
 	drawtype = "airlike",
-	walkable = false,
+	paramtype = "light",
 	pointable = false,
-	buildable_to = true,
+	sunlight_propagates = true,
 	groups = {unbreakable=1, not_in_creative_inventory=1},
 })
+
+minetest.register_node("maptools:fullclip_face", {
+	description = S("Full Clip Face"),
+	drawtype = "nodebox",
+	tiles = {"invisible.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	sunlight_propagates = true,
+	node_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.4999, 0.5},
+	},
+	groups = {unbreakable=1, not_in_creative_inventory=1, fall_damage_add_percent=-100},
+})
+
+minetest.register_node("maptools:playerclip_bottom", {
+	description = S("Player Clip Bottom Face"),
+	drawtype = "nodebox",
+	tiles = {"invisible.png"},
+	pointable = false,
+	paramtype = "light",
+	sunlight_propagates = true,
+	node_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.4999, 0.5},
+	},
+	groups = {unbreakable=1, not_in_creative_inventory=1, fall_damage_add_percent=-100},
+})
+
+minetest.register_node("maptools:playerclip_top", {
+	description = S("Player Clip Top Face"),
+	drawtype = "nodebox",
+	tiles = {"invisible.png"},
+	pointable = false,
+	paramtype = "light",
+	sunlight_propagates = true,
+	node_box = {
+		type = "fixed",
+		fixed = {-0.5, 0.4999, -0.5, 0.5, 0.5, 0.5},
+	},
+	groups = {unbreakable=1, not_in_creative_inventory=1, fall_damage_add_percent=-100},
+})
+
+for pusher_num=1,10,1 do
+minetest.register_node("maptools:pusher_" .. pusher_num, {
+	description = S("Pusher: %s"):format(pusher_num),
+	drawtype = "nodebox",
+	tiles = {"invisible.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	sunlight_propagates = true,
+	node_box = {
+		type = "fixed",
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.4999, 0.5},
+	},
+	groups = {unbreakable=1, not_in_creative_inventory=1, fall_damage_add_percent=-100, bouncy=pusher_num*100},
+})
+end
 
 minetest.register_node("maptools:lightbulb", {
 	description = S("Light Bulb"),
@@ -231,13 +289,13 @@ minetest.register_node("maptools:climb", {
 	groups = {unbreakable=1, not_in_creative_inventory=1},
 })
 
-for num=1,5,1 do
-minetest.register_node("maptools:damage_"..num, {
-	description = S("Damaging Block: %s"):format(num),
+for damage_num=1,5,1 do
+minetest.register_node("maptools:damage_" .. damage_num, {
+	description = S("Damaging Block: %s"):format(damage_num),
 	drawtype = "airlike",
 	walkable = false,
 	pointable = false,
-	damage_per_second = num,
+	damage_per_second = damage_num,
 	paramtype = "light",
 	sunlight_propagates = true,
 	groups = {unbreakable=1, not_in_creative_inventory=1},

@@ -33,17 +33,17 @@ end
 
 	
 -- How many microblocks does this shape at the output inventory cost?
-circular_saw.cost_in_microblocks = { 6, 4, 7, 2, 1, 3, 3,
-								 6, 4, 7, 2, 1, 3, 3,
-								 6, 2, 7, 2, 6, 3, 0,
-								 4, 2, 7, 0, 6, 3, 0 };
+circular_saw.cost_in_microblocks = { 6, 7, 5, 3, 3, 2, 4,
+								 6, 2, 1, 2, 1, 1, 4,
+								 0, 0, 0, 0, 0, 0, 0,
+								 0, 0, 0, 0, 0, 0, 0 };
 
 -- anz: amount of input material in microblocks
 circular_saw.get_stair_output_inv = function(modname, material, anz, max)
 
 	local max_offered = 99;
 
-	if(not(max) or (max == nil) or tonumber(max)>99 or tonumber(max)<1) then
+	if(not(max) or (max == nil) or tonumber(max) > 99 or tonumber(max) < 1) then
 		max_offered = 99;
 	else
 		max_offered = tonumber(max);
@@ -61,36 +61,19 @@ circular_saw.get_stair_output_inv = function(modname, material, anz, max)
 	return { 
 	modname .. ":stair_" .. material .. " "                        .. math.min(math.floor(anz/6), max_offered),
 	modname .. ":stair_" .. material .. "_inner "                  .. math.min(math.floor(anz/7), max_offered),
+	modname .. ":stair_" .. material .. "_outer "                  .. math.min(math.floor(anz/5), max_offered),
+	modname .. ":stair_" .. material .. "_half "                   .. math.min(math.floor(anz/3), max_offered),
+	modname .. ":stair_" .. material .. "_right_half "             .. math.min(math.floor(anz/3), max_offered),
+	modname .. ":slab_"  .. material .. "_quarter "                .. math.min(math.floor(anz/2), max_offered),
+	modname .. ":slab_"  .. material .. " "                        .. math.min(math.floor(anz/4), max_offered),
+
+	modname .. ":slab_"  .. material .. "_three_quarter "          .. math.min(math.floor(anz/6), max_offered),
 	modname .. ":panel_" .. material .. "_bottom "                 .. math.min(math.floor(anz/2), max_offered),
 	modname .. ":micro_" .. material .. "_bottom "                 .. math.min(math.floor(anz/1), max_offered),
-	modname .. ":stair_" .. material .. "_half "                   .. math.min(math.floor(anz/3), max_offered),
-	modname .. ":stair_" .. material .. "_wall_half "              .. math.min(math.floor(anz/3), max_offered),
-
-
-	modname .. ":stair_" .. material .. "_inverted "               .. math.min(math.floor(anz/6), max_offered),
-	modname .. ":slab_"  .. material .. "_inverted "               .. math.min(math.floor(anz/4), max_offered),
-	modname .. ":stair_" .. material .. "_inner_inverted "         .. math.min(math.floor(anz/7), max_offered),
-	modname .. ":panel_" .. material .. "_top "                    .. math.min(math.floor(anz/2), max_offered),
-	modname .. ":micro_" .. material .. "_top "                    .. math.min(math.floor(anz/1), max_offered),
-	modname .. ":stair_" .. material .. "_half_inverted "          .. math.min(math.floor(anz/3), max_offered),
-	modname .. ":stair_" .. material .. "_wall_half_inverted "     .. math.min(math.floor(anz/3), max_offered),
-
-
-	modname .. ":stair_" .. material .. "_wall "                   .. math.min(math.floor(anz/6), max_offered),
-	modname .. ":slab_"  .. material .. "_quarter "                .. math.min(math.floor(anz/2), max_offered),
-	modname .. ":stair_" .. material .. "_outer "                  .. math.min(math.floor(anz/7), max_offered),
-	modname .. ":panel_" .. material .. "_vertical "               .. math.min(math.floor(anz/2), max_offered),
-	modname .. ":slab_"  .. material .. "_three_quarter "          .. math.min(math.floor(anz/6), max_offered),
-	modname .. ":stair_" .. material .. "_right_half "             .. math.min(math.floor(anz/3), max_offered),
-	modname .. ":slab_"  .. material .. "_quarter_wall "           .. math.min(math.floor(anz/2), max_offered),  
-
-
-	modname .. ":slab_"  .. material .. " "                        .. math.min(math.floor(anz/4), max_offered),
-	modname .. ":slab_"  .. material .. "_quarter_inverted "       .. math.min(math.floor(anz/2), max_offered),
-	modname .. ":stair_" .. material .. "_outer_inverted "         .. math.min(math.floor(anz/7), max_offered),
-	modname .. ":slab_"  .. material .. "_three_quarter_wall "     .. math.min(math.floor(anz/6), max_offered),
-	modname .. ":slab_"  .. material .. "_three_quarter_inverted " .. math.min(math.floor(anz/6), max_offered),
-	modname .. ":stair_" .. material .. "_right_half_inverted "    .. math.min(math.floor(anz/3), max_offered),
+	modname .. ":panel_" .. material .. "_centered "               .. math.min(math.floor(anz/2), max_offered),
+	modname .. ":micro_" .. material .. "_semi_centered "          .. math.min(math.floor(anz/1), max_offered),
+	modname .. ":micro_" .. material .. "_centered "               .. math.min(math.floor(anz/1), max_offered),
+	modname .. ":stair_" .. material .. "_alt "                    .. math.min(math.floor(anz/4), max_offered),
 	"", 
 	}
 end

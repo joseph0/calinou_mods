@@ -20,10 +20,14 @@ Climb Block = Bloc à grimper
 Light Block = Bloqueur de lumière
 Light Bulb = Bloc lumineux
 Player Clip = Bloque-joueurs
+Player Clip Bottom Face = Face inférieure de bloque-joueurs
+Player Clip Top Face = Face supérieure de bloque-joueurs
 Full Clip = Bloque-tout
+Full Clip Face = Face de bloque-tout
 Permanent Fire = Feu permanent
 Fake Fire = Faux feu
 Igniter = Incendieur
+Pusher: %s = Pousseur : %s
 
 Unbreakable Stone = Pierre incassable
 Unbreakable Sand = Sable incassable
