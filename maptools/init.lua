@@ -193,7 +193,7 @@ minetest.register_node("maptools:fullclip_face", {
 	drawtype = "nodebox",
 	tiles = {"invisible.png"},
 	paramtype = "light",
-	paramtype2 = "facedir",
+	paramtype2 = "wallmounted",
 	sunlight_propagates = true,
 	node_box = {
 		type = "fixed",
