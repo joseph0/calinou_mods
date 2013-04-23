@@ -105,14 +105,14 @@ minetest.register_craft({
 minetest.register_craft({
 	output = modname .. ":panel_" .. subname .. "_vertical",
 	recipe = {
-		{modname .. ":panel_" .. subname "_top"},
+		{modname .. ":panel_" .. subname .. "_top"},
 	},
 })
 
 minetest.register_craft({
 	output = modname .. ":panel_" .. subname .. "_bottom",
 	recipe = {
-		{modname .. ":panel_" .. subname "_vertical"},
+		{modname .. ":panel_" .. subname .. "_vertical"},
 	},
 })
 end

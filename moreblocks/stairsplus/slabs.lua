@@ -509,14 +509,14 @@ minetest.register_craft({
 minetest.register_craft({
 	output = modname .. ":slab_" .. subname .. "_wall",
 	recipe = {
-		{modname .. ":slab_" .. subname "_inverted"},
+		{modname .. ":slab_" .. subname .. "_inverted"},
 	},
 })
 
 minetest.register_craft({
 	output = modname .. ":slab_" .. subname,
 	recipe = {
-		{modname .. ":slab_" .. subname "_wall"},
+		{modname .. ":slab_" .. subname .. "_wall"},
 	},
 })
 end

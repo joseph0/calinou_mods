@@ -92,7 +92,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = modname .. ":micro_" .. subname .. "_bottom",
 	recipe = {
-		{modname .. ":micro_" .. subname "_top"},
+		{modname .. ":micro_" .. subname .. "_top"},
 	},
 })
 end
