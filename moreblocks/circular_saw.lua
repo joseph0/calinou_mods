@@ -28,8 +28,8 @@ end
 
 	
 -- How many microblocks does this shape at the output inventory cost?
-circular_saw.cost_in_microblocks = { 6, 7, 5, 3, 3, 2, 4,
-								 6, 2, 1, 2, 1, 1, 4,
+circular_saw.cost_in_microblocks = { 6, 7, 5, 3, 2, 4, 6,
+								 2, 1, 4, 0, 0, 0, 0,
 								 0, 0, 0, 0, 0, 0, 0,
 								 0, 0, 0, 0, 0, 0, 0 };
 
@@ -58,16 +58,12 @@ circular_saw.get_stair_output_inv = function(modname, material, anz, max)
 	modname .. ":stair_" .. material .. "_inner "                  .. math.min(math.floor(anz/7), max_offered),
 	modname .. ":stair_" .. material .. "_outer "                  .. math.min(math.floor(anz/5), max_offered),
 	modname .. ":stair_" .. material .. "_half "                   .. math.min(math.floor(anz/3), max_offered),
-	modname .. ":stair_" .. material .. "_right_half "             .. math.min(math.floor(anz/3), max_offered),
 	modname .. ":slab_"  .. material .. "_quarter "                .. math.min(math.floor(anz/2), max_offered),
 	modname .. ":slab_"  .. material .. " "                        .. math.min(math.floor(anz/4), max_offered),
-
 	modname .. ":slab_"  .. material .. "_three_quarter "          .. math.min(math.floor(anz/6), max_offered),
+	
 	modname .. ":panel_" .. material .. "_bottom "                 .. math.min(math.floor(anz/2), max_offered),
 	modname .. ":micro_" .. material .. "_bottom "                 .. math.min(math.floor(anz/1), max_offered),
-	modname .. ":panel_" .. material .. "_centered "               .. math.min(math.floor(anz/2), max_offered),
-	modname .. ":micro_" .. material .. "_semi_centered "          .. math.min(math.floor(anz/1), max_offered),
-	modname .. ":micro_" .. material .. "_centered "               .. math.min(math.floor(anz/1), max_offered),
 	modname .. ":stair_" .. material .. "_alt "                    .. math.min(math.floor(anz/4), max_offered),
 	"", 
 	}
