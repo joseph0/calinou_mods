@@ -1,7 +1,136 @@
 -- Nodes will be called <modname>:{stair,slab,panel,micro}_<subname>
+
+if minetest.get_modpath("unified_inventory") or not minetest.setting_getbool("creative_mode") then
+	stairsplus_expect_infinite_stacks = false
+else
+	stairsplus_expect_infinite_stacks = true
+end
+
+local dirs1 = { 21, 20, 23, 22, 21 }
+local dirs2 = { 12, 9, 18, 7, 12 }
+
+stairsplus_players_onwall = {}
+
+minetest.register_chatcommand("st", {
+	params = "",
+	description = "Toggle stairsplus between placing wall/vertical stairs/panels and normal.",
+	func = function(name, param)
+		stairsplus_players_onwall[name] = not stairsplus_players_onwall[name]
+
+		if stairsplus_players_onwall[name] then
+			 minetest.chat_send_player(name, "Stairsplus:  Placing wall stairs/vertical panels.")
+		else
+			 minetest.chat_send_player(name, "Stairsplus:  Placing floor/ceiling stairs/panels.")
+		end
+	end
+})
+
+stairsplus_can_it_stack = function(itemstack, placer, pointed_thing)
+	return false
+--[[
+	if pointed_thing.type ~= "node" then
+		return itemstack
+	end
+
+	-- If it's being placed on an another similar one, replace it with
+	-- a full block
+	local slabpos = nil
+	local slabnode = nil
+	local p1 = pointed_thing.above
+	p1 = {x = p1.x, y = p1.y - 1, z = p1.z}
+	local n1 = minetest.env:get_node(p1)
+	if n1.name == modname .. ":slab_" .. subname then
+		slabpos = p1
+		slabnode = n1
+	end
+	if slabpos then
+		-- Remove the slab at slabpos
+		minetest.env:remove_node(slabpos)
+		-- Make a fake stack of a single item and try to place it
+		local fakestack = ItemStack(recipeitem)
+		pointed_thing.above = slabpos
+		fakestack = minetest.item_place(fakestack, placer, pointed_thing)
+		-- If the item was taken from the fake stack, decrement original
+		if not fakestack or fakestack:is_empty() then
+			itemstack:take_item(1)
+		-- Else put old node back
+		else
+			minetest.env:set_node(slabpos, slabnode)
+		end
+		return itemstack
+	end
+
+	if n1.name == modname .. ":slab_" .. subname .. "_quarter" then
+		slabpos = p1
+		slabnode = n1
+	end
+	if slabpos then
+		-- Remove the slab at slabpos
+		minetest.env:remove_node(slabpos)
+		-- Make a fake stack of a single item and try to place it
+		local fakestack = ItemStack(modname .. ":slab_" .. subname .. "_three_quarter")
+		pointed_thing.above = slabpos
+		fakestack = minetest.item_place(fakestack, placer, pointed_thing)
+		-- If the item was taken from the fake stack, decrement original
+		if not fakestack or fakestack:is_empty() then
+			itemstack:take_item(1)
+		-- Else put old node back
+		else
+			minetest.env:set_node(slabpos, slabnode)
+		end
+		return itemstack
+	end
+
+	-- Otherwise place regularly
+	return minetest.item_place(itemstack, placer, pointed_thing)
+
+]]--
+
+end
+
+function stairsplus_rotate_and_place(itemstack, placer, pointed_thing, onwall)
+
+	local node = minetest.env:get_node(pointed_thing.under)
+
+	if not minetest.registered_nodes[node.name] or not minetest.registered_nodes[node.name].on_rightclick then
+
+		local above = pointed_thing.above
+		local under = pointed_thing.under
+		local pitch = placer:get_look_pitch()
+		local node = minetest.env:get_node(above)
+		local fdir = minetest.dir_to_facedir(placer:get_look_dir())
+		local wield_name = itemstack:get_name()
+
+		if node.name ~= "air" then return end
+
+		local slab = string.find(wield_name, "slab")
+		local iswall = (above.x ~= under.x) or (above.z ~= under.z)
+		local isceiling = (above.x == under.x) and (above.z == under.z) and (pitch > 0)
+
+		if onwall then 
+			minetest.env:add_node(above, {name = wield_name, param2 = dirs2[fdir+2] }) -- place wall variant, alt. slab rotation
+		elseif slab and iswall then 
+			minetest.env:add_node(above, {name = wield_name, param2 = dirs2[fdir+2] }) -- place wall variant, alt. slab rotation
+		elseif isceiling then
+			if slab then fdir=0 end
+			minetest.env:add_node(above, {name = wield_name, param2 = dirs1[fdir+2] }) -- place upside down variant
+		else
+			if slab then fdir = 0 end
+			minetest.env:add_node(above, {name = wield_name, param2 = fdir }) -- place right side up
+		end
+
+		if not stairsplus_expect_infinite_stacks then
+			itemstack:take_item()
+			return itemstack
+		end
+	else
+		minetest.registered_nodes[node.name].on_rightclick(pointed_thing.under, node, placer)
+	end
+end
+
 function register_stair_slab_panel_micro(modname, subname, recipeitem, groups, images, description, drop, light)
 	register_stair(modname, subname, recipeitem, groups, images, description, drop, light)
-	register_slab(modname, subname, recipeitem, groups, images, description, drop, light)
+	register_slab( modname, subname, recipeitem, groups, images, description, drop, light)
 	register_panel(modname, subname, recipeitem, groups, images, description, drop, light)
 	register_micro(modname, subname, recipeitem, groups, images, description, drop, light)
 end
@@ -84,15 +213,29 @@ register_stair_slab_panel_micro("moreblocks", "jungletree", "default:jungletree"
 	"Jungle Tree",
 	"jungletree",
 	0)
-
--- More Blocks stairs/slabs/panels/microblocks
-
+	
+register_stair_slab_panel_micro("moreblocks", "obsidian", "default:obsidian",
+	{not_in_creative_inventory=1,cracky=1,level=2},
+	{"default_obsidian.png"},
+	"Obsidian",
+	"obsidian",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "obsidian_glass", "default:obsidian_glass",
+	{not_in_creative_inventory=1,cracky=3,oddly_breakable_by_hand=3},
+	{"moreblocks_obsidian_glass_stairsplus.png"},
+	"Obsidian Glass",
+	"obsidian_glass",
+	0)
+	
 register_stair_slab_panel_micro("moreblocks", "stonebrick", "default:stonebrick",
 	{not_in_creative_inventory=1,cracky=3},
 	{"default_stone_brick.png"},
 	"Stone Bricks",
 	"stone_bricks",
 	0)
+
+-- More Blocks stairs/slabs/panels/microblocks
 	
 register_stair_slab_panel_micro("moreblocks", "circle_stone_bricks", "moreblocks:circle_stone_bricks",
 	{not_in_creative_inventory=1,cracky=3},
@@ -127,13 +270,6 @@ register_stair_slab_panel_micro("moreblocks", "jungle_wood", "default:junglewood
 	{"default_junglewood.png"},
 	"Jungle Wood",
 	"jungle_wood",
-	0)
-	
-register_stair_slab_panel_micro("moreblocks", "circle_stone_bricks", "moreblocks:circle_stone_bricks",
-	{not_in_creative_inventory=1,cracky=3},
-	{"moreblocks_circle_stone_bricks.png"},
-	"Circle Stone Brick",
-	"circle_stone_bricks",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "plankstone", "moreblocks:plankstone",
@@ -232,18 +368,4 @@ register_stair_slab_panel_micro("moreblocks", "wood_tile_full", "moreblocks:wood
 	"moreblocks_wood_tile_full.png", "moreblocks_wood_tile_full.png^[transformR90", "moreblocks_wood_tile_full.png^[transformR90"},
 	"Full Wooden Tile",
 	"wood_tile_full",
-	0)
-	
-register_stair_slab_panel_micro("moreblocks", "obsidian", "default:obsidian",
-	{not_in_creative_inventory=1,cracky=1,level=2},
-	{"default_obsidian.png"},
-	"Obsidian",
-	"obsidian",
-	0)
-	
-register_stair_slab_panel_micro("moreblocks", "obsidian_glass", "default:obsidian_glass",
-	{not_in_creative_inventory=1,cracky=3,oddly_breakable_by_hand=3},
-	{"moreblocks_obsidian_glass_stairsplus.png"},
-	"Obsidian Glass",
-	"obsidian_glass",
 	0)

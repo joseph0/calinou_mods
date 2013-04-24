@@ -20,6 +20,7 @@ dofile(minetest.get_modpath("moreblocks").."/stairsplus/microblocks.lua")
 dofile(minetest.get_modpath("moreblocks").."/stairsplus/aliases.lua")
 dofile(minetest.get_modpath("moreblocks").."/stairsplus.lua")
 dofile(minetest.get_modpath("moreblocks").."/circular_saw.lua")
+dofile(minetest.get_modpath("moreblocks").."/stairsplus_convert.lua")
 
 print(S("[moreblocks] loaded."))
 
