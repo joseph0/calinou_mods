@@ -6,8 +6,8 @@ local dirs2 = { 12, 9, 18, 7, 12 }
 local dirs3 = { 14, 11, 16, 5, 14 }
 
 function register_6dfacedir_conversion(modname, material)
-	print("Register stairsplus 6d facedir conversion")
-	print('ABM for '..modname..' "'..material..'"')
+	--print("Register stairsplus 6d facedir conversion")
+	--print('ABM for '..modname..' "'..material..'"')
 
 	local objects_list1 = {
 		modname..":slab_" .. material .. "_inverted",
@@ -109,8 +109,8 @@ function register_6dfacedir_conversion(modname, material)
 			dest_object = string.gsub(dest_object, "_wall", "")
 		end
 
-		print("    +---> convert "..object)
-		print("    |     to "..dest_object)
+		--print("    +---> convert "..object)
+		--print("    |     to "..dest_object)
 
 		minetest.register_abm({
 			nodenames = { object },
@@ -131,37 +131,3 @@ function register_6dfacedir_conversion(modname, material)
 		})
 	end
 end
-
-register_6dfacedir_conversion("moreblocks", "wood")
-register_6dfacedir_conversion("moreblocks", "stone")
-register_6dfacedir_conversion("moreblocks", "cobble")
-register_6dfacedir_conversion("moreblocks", "mossycobble")
-register_6dfacedir_conversion("moreblocks", "brick")
-register_6dfacedir_conversion("moreblocks", "sandstone")
-register_6dfacedir_conversion("moreblocks", "tree")
-register_6dfacedir_conversion("moreblocks", "jungletree")
-register_6dfacedir_conversion("moreblocks", "glass")
-register_6dfacedir_conversion("moreblocks", "desert_stone")
-register_6dfacedir_conversion("moreblocks", "steelblock")
-register_6dfacedir_conversion("moreblocks", "obsidian")
-register_6dfacedir_conversion("moreblocks", "obsidian_glass")
-register_6dfacedir_conversion("moreblocks", "stonebrick")
-
-register_6dfacedir_conversion("moreblocks", "circle_stone_bricks")
-register_6dfacedir_conversion("moreblocks", "iron_stone_bricks")
-register_6dfacedir_conversion("moreblocks", "stone_tile")
-register_6dfacedir_conversion("moreblocks", "split_stone_tile")
-register_6dfacedir_conversion("moreblocks", "junglewood")
-register_6dfacedir_conversion("moreblocks", "plankstone")
-register_6dfacedir_conversion("moreblocks", "coal_checker")
-register_6dfacedir_conversion("moreblocks", "iron_checker")
-register_6dfacedir_conversion("moreblocks", "cactus_checker")
-register_6dfacedir_conversion("moreblocks", "coal_stone")
-register_6dfacedir_conversion("moreblocks", "iron_stone")
-register_6dfacedir_conversion("moreblocks", "coal_glass")
-register_6dfacedir_conversion("moreblocks", "iron_gkass")
-register_6dfacedir_conversion("moreblocks", "glow_glass")
-register_6dfacedir_conversion("moreblocks", "super_glow_glass")
-register_6dfacedir_conversion("moreblocks", "wood_tile")
-register_6dfacedir_conversion("moreblocks", "wood_tile_center")
-register_6dfacedir_conversion("moreblocks", "wood_tile_full")
