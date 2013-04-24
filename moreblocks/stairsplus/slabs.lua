@@ -18,7 +18,7 @@ function register_slab(modname, subname, recipeitem, groups, images, description
 	light_source = light,
 	drop = modname .. ":slab_" .. drop,
 	paramtype = "light",
-	paramtype2 = paramtype2,
+	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = groups,
 	node_box = {
@@ -115,7 +115,7 @@ minetest.register_node(":"..modname .. ":slab_" .. subname .. "_inverted", {
 	light_source = light,
 	drop = modname .. ":slab_" .. drop .. "_inverted",
 	paramtype = "light",
-	paramtype2 = paramtype2,
+	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = groups,
 	node_box = {
@@ -255,7 +255,7 @@ minetest.register_node(":"..modname .. ":slab_" .. subname .. "_quarter", {
 	light_source = light,
 	drop = modname .. ":slab_" .. drop .. "_quarter",
 	paramtype = "light",
-	paramtype2 = paramtype2,
+	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = groups,
 	node_box = {
@@ -354,7 +354,7 @@ minetest.register_node(":"..modname .. ":slab_" .. subname .. "_quarter_inverted
 	light_source = light,
 	drop = modname .. ":slab_" .. drop .. "_quarter",
 	paramtype = "light",
-	paramtype2 = paramtype2,
+	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = groups,
 	node_box = {
@@ -453,7 +453,7 @@ minetest.register_node(":"..modname .. ":slab_" .. subname .. "_three_quarter", 
 	light_source = light,
 	drop = modname .. ":slab_" .. drop .. "_three_quarter",
 	paramtype = "light",
-	paramtype2 = paramtype2,
+	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = groups,
 	node_box = {
@@ -474,7 +474,7 @@ minetest.register_node(":"..modname .. ":slab_" .. subname .. "_three_quarter_in
 	light_source = light,
 	drop = modname .. ":slab_" .. drop .. "_three_quarter",
 	paramtype = "light",
-	paramtype2 = paramtype2,
+	paramtype2 = "facedir",
 	sunlight_propagates = true,
 	groups = groups,
 	node_box = {
