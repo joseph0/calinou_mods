@@ -34,6 +34,7 @@ function register_micro(modname, subname, recipeitem, groups, images, descriptio
 		on_place = function(itemstack, placer, pointed_thing)
 			local keys=placer:get_player_control()
 			stairsplus_rotate_and_place(itemstack, placer, pointed_thing, keys["sneak"])
+			return itemstack
 		end
 	})
 

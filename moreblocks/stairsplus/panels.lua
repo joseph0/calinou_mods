@@ -33,6 +33,7 @@ function register_panel(modname, subname, recipeitem, groups, images, descriptio
 		on_place = function(itemstack, placer, pointed_thing)
 			local playername = placer:get_player_name()
 			stairsplus_rotate_and_place(itemstack, placer, pointed_thing, stairsplus_players_onwall[playername])
+			return itemstack
 		end
 	})
 
