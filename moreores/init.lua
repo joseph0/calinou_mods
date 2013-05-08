@@ -332,10 +332,6 @@ local function generate_ore(name, wherein, minp, maxp, seed, chunks_per_volume, 
 	-- print(generate_ore done)
 end
 
--- Ore generation
-
-if minetest.registered_nodes["default:stone_with_gold"] then
-	-- Git
 	minetest.register_ore({
 		ore_type       = "scatter",
 		ore            = "moreores:mineral_tin",
@@ -366,28 +362,3 @@ if minetest.registered_nodes["default:stone_with_gold"] then
 		height_min     = moreores_mithril_min_depth,
 		height_max     = moreores_mithril_max_depth
 	})
-	else
-	-- 0.4.5 and before
-	minetest.register_on_generated(function(minp, maxp, seed)
-	math.randomseed(os.time())
-	local current_seed = seed + math.random(10, 100)
-	local function get_next_seed()
-		current_seed = current_seed + 1
-		return current_seed
-	end
-	generate_ore("moreores:mineral_copper", "default:stone", minp, maxp, get_next_seed(),
-	1/moreores_copper_chunk_size/moreores_copper_chunk_size/moreores_copper_chunk_size, moreores_copper_ore_per_chunk, moreores_copper_min_depth, moreores_copper_max_depth)
-
-	generate_ore("moreores:mineral_tin", "default:stone", minp, maxp, get_next_seed(),
-	1/moreores_tin_chunk_size/moreores_tin_chunk_size/moreores_tin_chunk_size, moreores_tin_ore_per_chunk, moreores_tin_min_depth, moreores_tin_max_depth)
-
-	generate_ore("moreores:mineral_silver", "default:stone", minp, maxp, get_next_seed(),
-	1/moreores_silver_chunk_size/moreores_silver_chunk_size/moreores_silver_chunk_size, moreores_silver_ore_per_chunk, moreores_silver_min_depth, moreores_silver_max_depth)
-
-	generate_ore("moreores:mineral_gold", "default:stone", minp, maxp, get_next_seed(),
-	1/moreores_gold_chunk_size/moreores_gold_chunk_size/moreores_gold_chunk_size, moreores_gold_ore_per_chunk, moreores_gold_min_depth, moreores_gold_max_depth)
-
-	generate_ore("moreores:mineral_mithril", "default:stone", minp, maxp, get_next_seed(),
-	1/moreores_mithril_chunk_size/moreores_mithril_chunk_size/moreores_mithril_chunk_size, moreores_mithril_ore_per_chunk, moreores_mithril_min_depth, moreores_mithril_max_depth)
-end)
-end
