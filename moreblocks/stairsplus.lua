@@ -88,6 +88,13 @@ stairsplus_can_it_stack = function(itemstack, placer, pointed_thing)
 
 end
 
+local function get_nodedef_field(nodename, fieldname)
+	if not minetest.registered_nodes[nodename] then
+		return nil
+	end
+	return minetest.registered_nodes[nodename][fieldname]
+end
+
 function stairsplus_rotate_and_place(itemstack, placer, pointed_thing, onwall)
 
 	local node = minetest.env:get_node(pointed_thing.under)
@@ -96,18 +103,23 @@ function stairsplus_rotate_and_place(itemstack, placer, pointed_thing, onwall)
 
 		local above = pointed_thing.above
 		local under = pointed_thing.under
+		local top = {x=under.x, y=under.y+1, z=under.z}
+
 		local pitch = placer:get_look_pitch()
 		local node = minetest.env:get_node(above)
 		local fdir = minetest.dir_to_facedir(placer:get_look_dir())
 		local wield_name = itemstack:get_name()
 
-		if node.name ~= "air" then return end
-
 		local slab = string.find(wield_name, "slab")
 		local iswall = (above.x ~= under.x) or (above.z ~= under.z)
 		local isceiling = (above.x == under.x) and (above.z == under.z) and (pitch > 0)
 
-		if onwall then 
+		if get_nodedef_field(minetest.env:get_node(under).name, "buildable_to") then
+			if slab then fdir = 0 end
+			minetest.env:add_node(under, {name = wield_name, param2 = fdir }) -- place right side up
+		elseif not get_nodedef_field(minetest.env:get_node(above).name, "buildable_to") then
+			return
+		elseif onwall then 
 			minetest.env:add_node(above, {name = wield_name, param2 = dirs2[fdir+2] }) -- place wall variant, alt. slab rotation
 		elseif slab and iswall then 
 			minetest.env:add_node(above, {name = wield_name, param2 = dirs2[fdir+2] }) -- place wall variant, alt. slab rotation
