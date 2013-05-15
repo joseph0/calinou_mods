@@ -127,7 +127,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "moreblocks:allfaces_tree 8",
+	output = "moreblocks:all_faces_tree 8",
 	recipe = {
 		{"default:tree", "default:tree", "default:tree"},
 		{"default:tree", "", "default:tree"},
