@@ -291,6 +291,14 @@ minetest.register_node("moreblocks:all_faces_tree", {
 	furnace_burntime = 30,
 })
 
+minetest.register_node("moreblocks:all_faces_jungle_tree", {
+	description = S("All-faces Tree"),
+	tiles = {"default_jungletree_top.png"},
+	groups = {tree=1,snappy=1,choppy=2,oddly_breakable_by_hand=1,flammable=2},
+	sounds = default.node_sound_wood_defaults(),
+	furnace_burntime = 30,
+})
+
 minetest.register_node("moreblocks:glow_glass", {
 	description = S("Glow Glass"),
 	drawtype = "glasslike",

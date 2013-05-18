@@ -136,6 +136,15 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = "moreblocks:all_faces_jungle_tree 8",
+	recipe = {
+		{"default:jungletree", "default:jungletree", "default:jungletree"},
+		{"default:jungletree", "", "default:jungletree"},
+		{"default:jungletree", "default:jungletree", "default:jungletree"},
+	}
+})
+
+minetest.register_craft({
 	output = "moreblocks:sweeper 3",
 	recipe = {
 		{"default:junglegrass"},
