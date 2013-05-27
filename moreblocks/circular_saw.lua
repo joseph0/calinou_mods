@@ -16,7 +16,8 @@ circular_saw.known_stairs = {}
 -- Register known moreblocks stairs
 for i,v in ipairs({"default:wood", "default:stone", "default:cobble", "default:mossycobble", "default:brick", "default:sandstone",
 				"default:steelblock", "default:desert_stone", "default:glass", "default:tree", "default:jungletree", "default:stonebrick",
-				"default:obsidian", "default:obsidian_glass", "default:stone_bricks", "default:junglewood",
+				"default:obsidian", "default:obsidian_glass", "default:stone_bricks", "default:junglewood", "default:goldblock",
+				"default:copperblock", "default:bronzeblock", "default:diamondblock", "default:desert_stonebrick", "default:sandstonebrick",
 
 				"moreblocks:coal_stone", "moreblocks:iron_stone", "moreblocks:coal_checker", "moreblocks:iron_checker",
 				"moreblocks:cactus_checker", "moreblocks:coal_glass", "moreblocks:iron_glass", "moreblocks:glow_glass",

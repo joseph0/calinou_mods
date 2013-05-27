@@ -193,10 +193,38 @@ register_stair_slab_panel_micro("moreblocks", "sandstone", "default:sandstone",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "steelblock", "default:steelblock",
-	{not_in_creative_inventory=1,snappy=1,bendy=2,cracky=1,melty=2,level=2},
+	{not_in_creative_inventory=1,cracky=1,level=2},
 	{"default_steel_block.png"},
 	"Steel Block",
 	"steelblock",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "goldblock", "default:goldblock",
+	{not_in_creative_inventory=1,cracky=1},
+	{"default_gold_block.png"},
+	"Gold Block",
+	"goldblock",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "copperblock", "default:copperblock",
+	{not_in_creative_inventory=1,cracky=1,level=2},
+	{"default_copper_block.png"},
+	"Copper Block",
+	"copperblock",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "bronzeblock", "default:bronzeblock",
+	{not_in_creative_inventory=1,cracky=1,level=2},
+	{"default_bronze_block.png"},
+	"Bronze Block",
+	"bronzeblock",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "diamondblock", "default:diamondblock",
+	{not_in_creative_inventory=1,cracky=1,level=3},
+	{"default_diamond_block.png"},
+	"Diamond Block",
+	"diamondblock",
 	0)
 	
 register_stair_slab_panel_micro("moreblocks", "desert_stone", "default:desert_stone",
@@ -246,6 +274,20 @@ register_stair_slab_panel_micro("moreblocks", "stonebrick", "default:stonebrick"
 	{"default_stone_brick.png"},
 	"Stone Bricks",
 	"stone_bricks",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "desert_stonebrick", "default:desert_stonebrick",
+	{not_in_creative_inventory=1,cracky=3},
+	{"default_desert_stone_brick.png"},
+	"Desert Stone Bricks",
+	"desert_stonebrick",
+	0)
+	
+register_stair_slab_panel_micro("moreblocks", "sandstonebrick", "default:sandstonebrick",
+	{not_in_creative_inventory=1,cracky=3},
+	{"default_sandstone_brick.png"},
+	"Sandstone Bricks",
+	"sandstonebrick",
 	0)
 
 -- More Blocks stairs/slabs/panels/microblocks
