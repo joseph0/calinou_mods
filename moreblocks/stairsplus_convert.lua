@@ -2,7 +2,7 @@
 -- inverted, wall, etc to regular + 6d facedir
 
 local dirs1 = { 21, 20, 23, 22, 21 }
-local dirs2 = { 12, 9, 18, 7, 12 }
+local dirs2 = { 15, 8, 17, 6, 15 }
 local dirs3 = { 14, 11, 16, 5, 14 }
 
 function register_6dfacedir_conversion(modname, material)

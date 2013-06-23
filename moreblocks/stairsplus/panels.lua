@@ -31,8 +31,8 @@ function register_panel(modname, subname, recipeitem, groups, images, descriptio
 			fixed = {-0.5, -0.5, 0, 0.5, 0, 0.5},
 		},
 		on_place = function(itemstack, placer, pointed_thing)
-			local playername = placer:get_player_name()
-			stairsplus_rotate_and_place(itemstack, placer, pointed_thing, stairsplus_players_onwall[playername])
+			local keys=placer:get_player_control()
+			stairsplus_rotate_and_place(itemstack, placer, pointed_thing, keys["sneak"])
 			return itemstack
 		end
 	})
