@@ -6,8 +6,11 @@ else
 	stairsplus_expect_infinite_stacks = true
 end
 
+-- these vales are in order: facedir in degrees = 90, 0, 270, 180, 90
+
 local dirs1 = { 21, 20, 23, 22, 21 }
-local dirs2 = { 12, 9, 18, 7, 12 }
+local dirs2 = { 15, 8, 17, 6, 15 }
+local dirs3 = { 14, 11, 16, 5, 14 }
 
 stairsplus_players_onwall = {}
 
@@ -111,6 +114,8 @@ function stairsplus_rotate_and_place(itemstack, placer, pointed_thing, onwall)
 		local wield_name = itemstack:get_name()
 
 		local slab = string.find(wield_name, "slab")
+		local panel = string.find(wield_name, "panel")
+		local micro = string.find(wield_name, "micro")
 		local iswall = (above.x ~= under.x) or (above.z ~= under.z)
 		local isceiling = (above.x == under.x) and (above.z == under.z) and (pitch > 0)
 
@@ -119,13 +124,16 @@ function stairsplus_rotate_and_place(itemstack, placer, pointed_thing, onwall)
 			minetest.env:add_node(under, {name = wield_name, param2 = fdir }) -- place right side up
 		elseif not get_nodedef_field(minetest.env:get_node(above).name, "buildable_to") then
 			return
-		elseif onwall then 
-			minetest.env:add_node(above, {name = wield_name, param2 = dirs2[fdir+2] }) -- place wall variant, alt. slab rotation
-		elseif slab and iswall then 
-			minetest.env:add_node(above, {name = wield_name, param2 = dirs2[fdir+2] }) -- place wall variant, alt. slab rotation
+		elseif onwall or (iswall and (slab or panel)) then 
+			if slab then
+				minetest.env:add_node(above, {name = wield_name, param2 = dirs2[fdir+2] }) -- place with wall slab rotation
+			else
+				minetest.env:add_node(above, {name = wield_name, param2 = dirs3[fdir+2] }) -- place with wall panel/micro rotation
+			end
 		elseif isceiling then
-			if slab then fdir=0 end
-			minetest.env:add_node(above, {name = wield_name, param2 = dirs1[fdir+2] }) -- place upside down variant
+			local nfdir = dirs1[fdir+2]
+			if slab then nfdir = 22 end
+			minetest.env:add_node(above, {name = wield_name, param2 = nfdir }) -- place upside down variant
 		else
 			if slab then fdir = 0 end
 			minetest.env:add_node(above, {name = wield_name, param2 = fdir }) -- place right side up
